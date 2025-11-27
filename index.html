@@ -9,17 +9,17 @@
 
    <style>
       :root {
-         --bg-primary: #0a0e1a;
-         --bg-secondary: #0f1419;
-         --text-primary: #e6f1ff;
-         --text-secondary: #94a3b8;
-         --accent: #14b8a6;
-         --accent-dark: #0d9488;
-         --accent-light: #2dd4bf;
-         --glass-bg: rgba(20, 184, 166, 0.05);
-         --glass-border: rgba(20, 184, 166, 0.2);
-         --glass-shadow: rgba(20, 184, 166, 0.1);
-         --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+         --bg-primary: #07060a;
+         --bg-secondary: #0f0b14;
+         --text-primary: #eef2ff;
+         --text-secondary: #a3aed9;
+         --accent: #7c3aed; /* violet */
+         --accent-dark: #5b21b6;
+         --accent-light: #a78bfa;
+         --glass-bg: rgba(124, 58, 237, 0.05);
+         --glass-border: rgba(124, 58, 237, 0.18);
+         --glass-shadow: rgba(124, 58, 237, 0.08);
+         --transition: all 0.36s cubic-bezier(0.2, 0, 0.2, 1);
       }
 
       [data-theme="light"] {
@@ -72,29 +72,29 @@
       }
 
       .orb-1 {
-         width: 500px;
-         height: 500px;
+         width: 520px;
+         height: 520px;
          background: radial-gradient(circle, var(--accent), transparent);
-         top: -200px;
-         left: -200px;
+         top: -220px;
+         left: -160px;
          animation-delay: 0s;
       }
 
       .orb-2 {
-         width: 400px;
-         height: 400px;
+         width: 420px;
+         height: 420px;
          background: radial-gradient(circle, var(--accent-light), transparent);
-         bottom: -150px;
-         right: -150px;
+         bottom: -140px;
+         right: -160px;
          animation-delay: 7s;
       }
 
       .orb-3 {
-         width: 350px;
-         height: 350px;
+         width: 360px;
+         height: 360px;
          background: radial-gradient(circle, var(--accent-dark), transparent);
-         top: 50%;
-         left: 50%;
+         top: 48%;
+         left: 52%;
          animation-delay: 14s;
       }
 
@@ -559,11 +559,11 @@
       <div class="glass-card profile-card">
          <img src="https://avatars.githubusercontent.com/u/74381335?v=4" alt="Akshar Nath Gorain" class="avatar"/>
          <h1>Akshar Nath Gorain</h1>
-         <p class="subtitle">AI Researcher · Systems Engineer · B.Tech CSE 2nd Year</p>
+         <p class="subtitle">AI Researcher · Systems Engineer · B.Tech (CSE), 2nd Year</p>
          <p class="location">📍 Kolkata, West Bengal, India</p>
             
          <div class="company-badge">
-            <span class="badge-label">Mobile App UI Developer at</span>
+            <span class="badge-label">Mobile App UI Developer —</span>
             <a href="https://curaa.co.in" target="_blank" rel="noopener" class="company-link">
                <img src="curaa-logo.png" alt="CURAA" class="company-logo"/>
                <span>CURAA</span>
@@ -599,13 +599,13 @@
    <section class="about" id="about">
       <div class="glass-card">
          <h2>About Me</h2>
-         <p>I am a **Computer Science Engineer** currently pursuing my B.Tech at Techno India University. My passion lies at the core of **Deep Tech** and **Systems Engineering**, translating complex concepts in AI/ML and Cybersecurity into robust, scalable applications.</p>
+         <p>I am a <strong>Computer Science Engineer</strong> currently pursuing my B.Tech at Techno India University. My work focuses on <strong>Deep Tech</strong> and <strong>Systems Engineering</strong>, turning research ideas in AI/ML and cybersecurity into robust, production-ready systems.</p>
             
-         <p class="mt-20">**As an AI Researcher:** I specialize in **Knowledge Distillation** and **Computer Vision** with PyTorch. My research focuses on optimizing heavy neural networks for efficient deployment on edge devices, a focus I developed through guided academic work under **Dr. [cite_start]Kalpita Dutta**[cite: 14].</p>
+         <p class="mt-20"><strong>As an AI Researcher:</strong> I specialize in <strong>knowledge distillation</strong> and <strong>computer vision</strong> using PyTorch. My research explores compressing and optimizing large models for efficient edge deployment, carried out under the supervision of Dr. Kalpita Dutta.</p>
             
-         <p class="mt-20">**As a Systems Builder:** I am proficient in **Python**, **C/C++**, **Linux operations**, and **Web3** development (Solidity). My projects range from full-stack platforms like Jīva Health to low-level Linux automation scripts, demonstrating versatility across the stack. I also developed the UI for the Curaa mobile application.</p>
+         <p class="mt-20"><strong>As a Systems Builder:</strong> I am comfortable with <strong>Python</strong>, <strong>C/C++</strong>, Linux tooling, and Web3 (Solidity). My projects span full-stack platforms like Jīva Health to system automation scripts and a mobile UI implemented for CURAA.</p>
             
-         <p class="mt-20">I actively seek challenging opportunities to build impactful technology, leveraging my skills in Python, AI frameworks, and secure systems design.</p>
+         <p class="mt-20">I am looking for collaboration and research opportunities where I can apply machine learning, systems engineering, and secure design to build useful products.</p>
             
          <div class="tech-stack">
             <span class="tech-badge">Python</span>
@@ -614,7 +614,7 @@
             <span class="tech-badge">Solidity (Web3)</span>
             <span class="tech-badge">Bash (Linux)</span>
             <span class="tech-badge">FastAPI/Flask</span>
-            <span class="tech-badge">Gemini AI</span>
+            <span class="tech-badge">Large language models</span>
          </div>
       </div>
    </section>
@@ -942,376 +942,3 @@
    </script>
 </body>
 </html>
-      <!--roadmap area start
-      <div class="roadmap-area timeline-padding " id="timeline">
-         <div class="container">
-            <div class="page-header ">
-               <center>
-                  <h1 id="timeline">Timeline</h1>
-               </center>
-            </div>
-            <ul class="timeline">
-               <li>
-                  <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
-                  <div class="timeline-panel">
-                     <div class="timeline-heading">
-                        <center>
-                           <h4 class="timeline-title">Mentorship</h4>
-                        </center>
-                     </div>
-                     <div class="timeline-body">
-                        <center>
-                           <p>The team started its journey back in 2017 with a group
-                              of 7 girls under the mentorship of Vipin Pavithran, Sreepriya Chalakkal, and Sreelakshmi Pananghat.
-                           </p>
-                        </center>
-                     </div>
-                  </div>
-               </li>
-               <li class="timeline-inverted">
-                  <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
-                  <div class="timeline-panel">
-                     <div class="timeline-heading">
-                        <center>
-                           <h4 class="timeline-title">HackLu 2018</h4>
-                        </center>
-                     </div>
-                     <div class="timeline-body">
-                        <center>
-                           <p>One of the members, Geethna TK received a fully sponsored invite to attend the annual HackLu18
-                              conference and the reverse engineering workshop by Black hoodie at Luxembourg
-                           </p>
-                        </center>
-                     </div>
-                  </div>
-               </li>
-               <li>
-                  <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
-                  <div class="timeline-panel">
-                     <div class="timeline-heading">
-                        <center>
-                           <h4 class="timeline-title">First official CTF </h4>
-                        </center>
-                     </div>
-                     <div class="timeline-body">
-                        <center>
-                           <p>
-TeamShakti made its first public launch at Nullcon
-                              2019, after winning WinjaCTF receiving a SANS Scholarship
-                              worth 1500 USD.
-                           </p>
-                        </center>
-                     </div>
-                  </div>
-               </li>
-               <li class="timeline-inverted">
-                  <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
-                  <div class="timeline-panel">
-                     <div class="timeline-heading">
-                        <center>
-                           <h4 class="timeline-title">BlackHat Asia - 2019</h4>
-                        </center>
-                     </div>
-                     <div class="timeline-body">
-                        <center>
-                           <p>The members of TeamShakti received scholarships to attend BlackHat Asia 2019 held in Singapore.</p>
-                        </center>
-                     </div>
-                  </div>
-               </li>
-               </li>
-               <li>
-                  <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
-                  <div class="timeline-panel">
-                     <div class="timeline-heading">
-                        <center>
-                           <h4 class="timeline-title">BSides Delhi - 2019</h4>
-                        </center>
-                     </div>
-                     <div class="timeline-body">
-                        <center>
-                           <p>Two members of TeamShakti were invited to conduct a workshop on "Getting Started with Cybersecurity
-                              with CTF's" at BSides Delhi.
-                           </p>
-                        </center>
-                     </div>
-                  </div>
-               </li>
-               <li class="timeline-inverted">
-                  <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
-                  <div class="timeline-panel">
-                     <div class="timeline-heading">
-                        <center>
-                           <h4 class="timeline-title">HackLu - 2019</h4>
-                        </center>
-                     </div>
-                     <div class="timeline-body">
-                        <center>
-                           <p>Two students from the team were invited on a scholarship to provide a cybersecurity workshop at
-                              HackLu'19 on “Intro to Dark Arts”.
-                           </p>
-                        </center>
-                     </div>
-                  </div>
-               </li>
-               </li>
-               <li>
-                  <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
-                  <div class="timeline-panel">
-                     <div class="timeline-heading">
-                        <center>
-                           <h4 class="timeline-title">CTFtime Stats - 2019</h4>
-                        </center>
-                     </div>
-                     <div class="timeline-body">
-                        <center>
-                           <p>With a years' hardwork, TeamShakti landed at the 15'th position in The country.</p>
-                        </center>
-                     </div>
-                  </div>
-               </li>
-               </li>
-               <li class="timeline-inverted">
-                  <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
-                  <div class="timeline-panel">
-                     <div class="timeline-heading">
-                        <center>
-                           <h4 class="timeline-title">OwaspSeasides - 2020</h4>
-                        </center>
-                     </div>
-                     <div class="timeline-body">
-                        <center>
-                           <p>The members of TeamShakti organised a workshop on "Serverside Exploitation with PHP" at Nullcon, Goa.
-                           </p>
-                        </center>
-                     </div>
-                  </div>
-               </li>
-               </li>
-               <li>
-                  <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
-                  <div class="timeline-panel">
-                     <div class="timeline-heading">
-                        <center>
-                           <h4 class="timeline-title">Winja - 2020</h4>
-                        </center>
-                     </div>
-                     <div class="timeline-body">
-                        <center>
-                           <p>Bagged the 1'st and 2'nd positions in Winja CTF at Nullcon, Goa</p>
-                        </center>
-                     </div>
-                  </div>
-               </li>
-               </li>
-               <li class="timeline-inverted">
-                  <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
-                  <div class="timeline-panel">
-                     <div class="timeline-heading">
-                        <center>
-                           <h4 class="timeline-title">The CTFtime Stats - 2020</h4>
-                        </center>
-                     </div>
-                     <div class="timeline-body">
-                        <center>
-                           <p>Driven by passion and teamwork, TeamShakti holds a CTFtime ranking among the first 10 teams in the
-                              country[India].
-                           </p>
-                        </center>
-                     </div>
-                  </div>
-               </li>
-               <li>
-                  <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
-                  <div class="timeline-panel">
-                     <div class="timeline-heading">
-                        <center>
-                           <h4 class="timeline-title">Latest Updates</h4>
-                        </center>
-                     </div>
-                     <div class="timeline-body">
-                        <center>
-                           <p>We will be hosting ShaktiCon this year!</p>
-                        </center>
-                        <center>
-                           <p>Dates coming up soon!</p>
-                        </center>
-                        <hr>
-                     </div>
-                  </div>
-               </li>
-            </ul>
-         </div>
-      </div>
-      roadmap area end-->
-            <section>
-        <div class="membe">
-          <div class="space-20"></div>
-            <div class="container">
-                <div class="card text-center wow fadeInLeft" style="background: #181126">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col-sm-5">
-                            <img class="card-img" src="assets/img/home9.gif" alt="">
-                        </div>
-                        <div class="col-sm-7">
-                            
-                                <div class="hometitle">WHO AM I?</div>
-                                <br>
-                                <div class="homefont">IDK</div>
-                                 <div class="homefont">LOL</div>
-                                 <div class="homefont">DEVELOPER</div>
-                            </div>
-                        </div>
-                    
-                </div>
-                  <div class="space-50"></div>
-                <!--<div class="row align-items-center">-->
-                    <div class="card text-center wow fadeInRight" style="background: #181126; ">
-                        <div class="row no-gutters align-items-center">
-
-                            <div class="col-sm-7">
-                             
-                                    <div class="hometitle">WHAT WE DO?</div>
-                                    <br>
-                                    <div class="homefont">Nothing</div>
-                                    <div class = "homefont">...
-                                    </div>
-                                </div>
-                            
-                            <div class="col-sm-5">
-                                <img class="card-img" src="assets/img/home10.gif" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <!--</div>-->
-                    <div class="space-20"></div>
-            </div>
-            
-          </div>
-        </section>
-      <!--team-bg-->
-
-      <div class="team-bg">
-         <!--apps area start-->
-         <!--apps area end-->
-      </div>
-         <!--team bg area end-->
-
-         <!-- Projects (loaded from GitHub) -->
-         <section id="projects" class="section">
-            <div class="container">
-               <h2 class="heading white_fontcolour text-center">Projects</h2>
-               <div class="row" id="repo-list">
-                  <div class="col-12 text-center"><p>Loading projects…</p></div>
-               </div>
-            </div>
-         </section>
-
-         <!--footer start/Contact-->
-      <div class="container"></div>
-         <div class="page-footer footer-font">
-        <div class="row no-gutters">
-          <div class="col-12 text-center">
-          <img id="optional" src='assets/img/logo2.png' class='bg_footer'>
-          <center>
-          <h1 id ="contact" style ="color:azure;">Contact</h1>
-            <h1 style="margin-top:10px;"><span style="color:#d8d8d8">Get In </span> <span style="color:#38BFFF">Touch</span></h1>
-          <address>
-            <i class="fa fa-map-marker"  aria-hidden="true" style='font-size:22px'>
-              <span class="text">
-                             India</i>
-                    </address>
-          
-          </center>
-        
-       
-        <address><i class="fa fa-inbox" style='font-size:20px'></span><span class="text"> workforakng@gmail.com</i>        </address>
-        <!--<div class="single-community text-center">-->
-        <div class="temp-icon">
-          <a class="twitter-t" href="https://twitter.com/Ak_N_G"><i class="fa fa-twitter fa-2x"
-              aria-hidden="true"></i></a>
-          <a class="flag-t" href=""><i class="fa fa-flag fa-2x"
-              aria-hidden="true"></i></a>
-           <a class="github-t" href="https://github.com/workforakng"><i class="fa fa-github fa-2x"
-              aria-hidden="true"></i></a>
-        </div>
-        <div class="space-20"></div>
-
-          <p>
-            With &#128153 from AkNG.
-          
-          </p>
-         
-      </div>
-    </div>
-  </div>
-  </div>
-      <!--community area end-->
-      <!-- jquery 2.2.4 js-->
-      <script src="assets/js/jquery-2.2.4.min.js"></script>
-      <!-- popper js-->
-      <script src="assets/js/popper.js"></script>
-      <!-- carousel js-->
-      <script src="assets/js/owl.carousel.min.js"></script>
-      <!-- wow js-->
-      <script src="assets/js/wow.min.js"></script>
-      <!-- bootstrap js-->
-      <script src="assets/js/bootstrap.min.js"></script>
-      <!--mobile menu js-->
-      <script src="assets/js/jquery.slicknav.min.js"></script>
-      <!--particle s-->
-      <script src="assets/js/particles.min.js"></script>
-      <!-- main js-->
-      <script src="assets/js/main.js"></script>
-         <!-- Projects: fetch and render GitHub repos for user workforakng -->
-         <script>
-         document.addEventListener('DOMContentLoaded', function(){
-            const list = document.getElementById('repo-list');
-            if(!list) return;
-            fetch('https://api.github.com/users/workforakng/repos?per_page=100&sort=updated')
-               .then(r=>r.json())
-               .then(repos=>{
-                  if(!Array.isArray(repos)){
-                     list.innerHTML = '<p>Could not load projects.</p>';
-                     return;
-                  }
-                  const frag = document.createDocumentFragment();
-                  repos.forEach(repo=>{
-                     const col = document.createElement('div');
-                     col.className = 'col-md-4';
-                     const card = document.createElement('div');
-                     card.className = 'card mb-4';
-                     const body = document.createElement('div');
-                     body.className = 'card-body';
-                     const title = document.createElement('h5');
-                     title.className = 'card-title';
-                     const a = document.createElement('a');
-                     a.href = repo.html_url;
-                     a.target = '_blank';
-                     a.rel = 'noopener noreferrer';
-                     a.textContent = repo.name;
-                     title.appendChild(a);
-                     const p = document.createElement('p');
-                     p.className = 'card-text';
-                     p.textContent = repo.description || '';
-                     const meta = document.createElement('p');
-                     meta.className = 'text-muted small';
-                     meta.textContent = (repo.language ? repo.language + ' • ' : '') + (repo.stargazers_count? repo.stargazers_count+'★ ' : '') + (repo.forks_count? repo.forks_count+' forks' : '');
-                     body.appendChild(title);
-                     body.appendChild(p);
-                     body.appendChild(meta);
-                     card.appendChild(body);
-                     col.appendChild(card);
-                     frag.appendChild(col);
-                  });
-                  list.appendChild(frag);
-               })
-               .catch(err=>{
-                  console.error(err);
-                  list.innerHTML = '<p>Unable to load projects.</p>';
-               });
-         });
-         </script>
- </body>
-</html>
-<!doctype html>
