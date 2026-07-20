@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="728" viewBox="0 0 850 728">
+<defs>
+  <radialGradient id="bgGlow" cx="50%" cy="30%" r="90%">
+    <stop offset="0%" stop-color="#0F172A"/>
+    <stop offset="100%" stop-color="#050816"/>
+  </radialGradient>
+  <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#7C3AED"/>
+    <stop offset="50%" stop-color="#22D3EE"/>
+    <stop offset="100%" stop-color="#10B981"/>
+  </linearGradient>
+  <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="#7DD3FC" opacity="0.03"/>
+  </pattern>
+  <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#22D3EE" stop-opacity="0"/>
+    <stop offset="45%" stop-color="#22D3EE" stop-opacity="0.03"/>
+    <stop offset="50%" stop-color="#A5F3FC" stop-opacity="0.4"/>
+    <stop offset="55%" stop-color="#22D3EE" stop-opacity="0.03"/>
+    <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+
+<!-- Card Background -->
+<rect width="850" height="728" rx="14" fill="url(#bgGlow)"/>
+<rect width="850" height="728" rx="14" fill="url(#scanlines)"/>
+
+<!-- Titlebar -->
+<g id="titlebar">
+  <rect x="1" y="1" width="848" height="38" rx="13" fill="#1E293B" fill-opacity="0.85"/>
+  <!-- Traffic Light Windows Controls -->
+  <circle cx="24" cy="20" r="5" fill="#EF4444"/>
+  <circle cx="40" cy="20" r="5" fill="#FBBF24"/>
+  <circle cx="56" cy="20" r="5" fill="#34D399"/>
+  <!-- Terminal Title -->
+  <text x="425" y="24" text-anchor="middle" font-family="'Fira Code', 'JetBrains Mono', 'Courier New', Consolas, monospace" font-size="12" fill="#94A3B8">akshar@macbook: ~/about_me.py</text>
+</g>
+
+<!-- Code Block -->
+<text font-family="'Fira Code', 'JetBrains Mono', 'Courier New', Consolas, monospace" font-size="13.5" fill="#E2E8F0" xml:space="preserve">
+    <tspan x="30" y="75"><tspan fill="#F472B6" font-weight="bold">from</tspan> dataclasses <tspan fill="#F472B6" font-weight="bold">import</tspan> dataclass, field</tspan>
+    <tspan x="30" y="97"> </tspan>
+    <tspan x="30" y="119"><tspan fill="#FBBF24" font-weight="bold">@dataclass</tspan></tspan>
+    <tspan x="30" y="141"><tspan fill="#F472B6" font-weight="bold">class</tspan> <tspan fill="#60A5FA" font-weight="bold">Akshar</tspan>:</tspan>
+    <tspan x="30" y="163">    <tspan fill="#F472B6" font-weight="bold">def</tspan> <tspan fill="#38BDF8">__init__</tspan>(<tspan fill="#F472B6" font-weight="bold">self</tspan>):</tspan>
+    <tspan x="30" y="185">        <tspan fill="#F472B6" font-weight="bold">self</tspan>.role       = <tspan fill="#34D399">&quot;Systems Engineer &amp; AI Researcher&quot;</tspan></tspan>
+    <tspan x="30" y="207">        <tspan fill="#F472B6" font-weight="bold">self</tspan>.education  = <tspan fill="#34D399">&quot;B.Tech CSE, 2nd Year @ Techno India University&quot;</tspan></tspan>
+    <tspan x="30" y="229">        <tspan fill="#F472B6" font-weight="bold">self</tspan>.location   = <tspan fill="#34D399">&quot;Kolkata, India 🇮🇳&quot;</tspan></tspan>
+    <tspan x="30" y="251">        <tspan fill="#F472B6" font-weight="bold">self</tspan>.stacks     = <tspan fill="#F59E0B">[</tspan><tspan fill="#34D399">&quot;Full-Stack&quot;</tspan>, <tspan fill="#34D399">&quot;Computer Vision&quot;</tspan>, <tspan fill="#34D399">&quot;Model Compression&quot;</tspan>, <tspan fill="#34D399">&quot;Edge AI&quot;</tspan><tspan fill="#F59E0B">]</tspan></tspan>
+    <tspan x="30" y="273">        <tspan fill="#F472B6" font-weight="bold">self</tspan>.philosophy = <tspan fill="#34D399">&quot;Build systems that matter. Research that makes impact. Code that solves real problems.&quot;</tspan></tspan>
+    <tspan x="30" y="295"> </tspan>
+    <tspan x="30" y="317">    <tspan fill="#F472B6" font-weight="bold">def</tspan> <tspan fill="#38BDF8">current_focus</tspan>(<tspan fill="#F472B6" font-weight="bold">self</tspan>) -&gt; <tspan fill="#A78BFA">list</tspan>[<tspan fill="#A78BFA">str</tspan>]:</tspan>
+    <tspan x="30" y="339">        <tspan fill="#F472B6" font-weight="bold">return</tspan> <tspan fill="#F59E0B">[</tspan></tspan>
+    <tspan x="30" y="361">            <tspan fill="#34D399">&quot;🐾 Designing UI flows for CURAA — cross-platform pet care ecosystem&quot;</tspan>,</tspan>
+    <tspan x="30" y="383">            <tspan fill="#34D399">&quot;🧠 Researching Knowledge Distillation and Computer Vision&quot;</tspan>,</tspan>
+    <tspan x="30" y="405">            <tspan fill="#34D399">&quot;⚡ Building production-grade systems in healthcare, blockchain, and automation&quot;</tspan>,</tspan>
+    <tspan x="30" y="427">            <tspan fill="#34D399">&quot;☁️ AI Automation &amp; Enterprise Integrations @ IBM SkillsBuild&quot;</tspan>,</tspan>
+    <tspan x="30" y="449">        <tspan fill="#F59E0B">]</tspan></tspan>
+    <tspan x="30" y="471"> </tspan>
+    <tspan x="30" y="493">    <tspan fill="#F472B6" font-weight="bold">def</tspan> <tspan fill="#38BDF8">__repr__</tspan>(<tspan fill="#F472B6" font-weight="bold">self</tspan>) -&gt; <tspan fill="#A78BFA">str</tspan>:</tspan>
+    <tspan x="30" y="515">        <tspan fill="#F472B6" font-weight="bold">return</tspan> <tspan fill="#34D399">f&quot;&lt;Akshar | </tspan><tspan fill="#F59E0B">{</tspan><tspan fill="#F472B6" font-weight="bold">self</tspan>.role<tspan fill="#F59E0B">}</tspan><tspan fill="#34D399"> | </tspan><tspan fill="#F59E0B">{</tspan><tspan fill="#F472B6" font-weight="bold">self</tspan>.location<tspan fill="#F59E0B">}</tspan><tspan fill="#34D399">&gt;&quot;</tspan></tspan>
+    <tspan x="30" y="537"> </tspan>
+    <tspan x="30" y="559"> </tspan>
+    <tspan x="30" y="581"><tspan fill="#F472B6" font-weight="bold">if</tspan> <tspan fill="#38BDF8">__name__</tspan> == <tspan fill="#34D399">&quot;__main__&quot;</tspan>:</tspan>
+    <tspan x="30" y="603">    me = <tspan fill="#60A5FA" font-weight="bold">Akshar</tspan>()</tspan>
+    <tspan x="30" y="625">    <tspan fill="#A78BFA">print</tspan>(me)</tspan>
+    <tspan x="30" y="647">    <tspan fill="#A78BFA">print</tspan>(<tspan fill="#34D399">&quot;\n📌 Currently focused on:&quot;</tspan>)</tspan>
+    <tspan x="30" y="669">    <tspan fill="#F472B6" font-weight="bold">for</tspan> item <tspan fill="#F472B6" font-weight="bold">in</tspan> me.<tspan fill="#38BDF8">current_focus</tspan>():</tspan>
+    <tspan x="30" y="691">        <tspan fill="#A78BFA">print</tspan>(<tspan fill="#34D399">f&quot;  </tspan><tspan fill="#F59E0B">{</tspan>item<tspan fill="#F59E0B">}</tspan><tspan fill="#34D399">&quot;</tspan>)</tspan>
+</text>
+
+<!-- Blinking Cursor -->
+<rect x="302" y="680" width="8" height="15" fill="#22D3EE">
+  <animate attributeName="opacity" values="0;0;1;0;1;0;1;0" keyTimes="0;0.01;0.02;0.3;0.5;0.7;0.85;1" dur="1.2s" repeatCount="indefinite"/>
+</rect>
+
+<!-- Moving Scanline Glow -->
+<rect width="850" height="60" fill="url(#scanGrad)" opacity="0.6" style="mix-blend-mode:screen">
+  <animateTransform attributeName="transform" type="translate" from="0 -60" to="0 728" dur="5s" repeatCount="indefinite"/>
+</rect>
+
+<!-- Card Border -->
+<rect x="1" y="1" width="848" height="726" rx="13" fill="none" stroke="url(#borderGrad)" stroke-width="1.5" opacity="0.65"/>
+</svg>

@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Akshar Nath Gorain — Systems Engineer & AI Researcher. Knowledge Distillation, Computer Vision, Full-Stack, Edge AI."/>
+  <title>Akshar Nath Gorain | AI Researcher & Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="icon" href="https://github.com/workforakng.png" type="image/png"/>
+
+  <style>
+    /* ══ TOKENS ══════════════════════════════ */
+    :root {
+      --bg:#050505; --bg2:#0a0a0a;
+      --surf:rgba(255,255,255,0.032); --surf-h:rgba(255,255,255,0.06);
+      --primary:#a78bfa; --cyan:#00f0ff; --blue:#3b82f6;
+      --text:#f3f4f6; --muted:#9ca3af;
+      --border:rgba(255,255,255,0.08); --border-h:rgba(167,139,250,0.45);
+      --glow:0 0 32px rgba(167,139,250,0.18);
+      --ease:cubic-bezier(.4,0,.2,1);
+      --mono:'JetBrains Mono',monospace;
+    }
+    [data-theme="light"]{
+      --bg:#f8fafc;--bg2:#fff;--surf:rgba(0,0,0,.03);--surf-h:rgba(0,0,0,.06);
+      --primary:#7c3aed;--cyan:#0284c7;--text:#0f172a;--muted:#64748b;
+      --border:rgba(0,0,0,.08);--border-h:rgba(124,58,237,.45);
+      --glow:0 0 20px rgba(124,58,237,.12);
+    }
+
+    /* ══ RESET ══ */
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Inter',sans-serif;
+      background:var(--bg);color:var(--text);
+      line-height:1.6;overflow-x:hidden;
+      cursor:none; /* use custom cursor */
+    }
+    a{text-decoration:none;color:inherit}
+    strong{color:var(--text);font-weight:600}
+
+    /* ══ CUSTOM CURSOR (gravity well) ══ */
+    #cursor {
+      position:fixed; width:12px; height:12px;
+      background:var(--primary); border-radius:50%;
+      pointer-events:none; z-index:9999;
+      transform:translate(-50%,-50%);
+      transition:transform .1s, width .2s, height .2s, opacity .2s;
+      mix-blend-mode:screen;
+    }
+    #cursor-ring {
+      position:fixed; width:40px; height:40px;
+      border:1px solid rgba(167,139,250,0.5);
+      border-radius:50%; pointer-events:none; z-index:9998;
+      transform:translate(-50%,-50%);
+      transition:transform .12s var(--ease), width .2s, height .2s, border-color .2s;
+    }
+    #cursor-field {
+      position:fixed; width:180px; height:180px;
+      border-radius:50%; pointer-events:none; z-index:9997;
+      transform:translate(-50%,-50%);
+      background:radial-gradient(circle, rgba(167,139,250,0.06) 0%, transparent 70%);
+      transition:transform .08s;
+    }
+    body:has(a:hover) #cursor { width:20px;height:20px; }
+    body:has(.btn:hover) #cursor-ring { width:60px;height:60px;border-color:var(--primary); }
+
+    /* ══ PARTICLES ══ */
+    #particles-js{position:fixed;inset:0;z-index:0;pointer-events:all}
+    body::before{
+      content:'';position:fixed;top:-20%;left:-10%;
+      width:70vw;height:70vw;
+      background:radial-gradient(circle,rgba(167,139,250,.08) 0%,transparent 70%);
+      pointer-events:none;z-index:0;
+    }
+    body::after{
+      content:'';position:fixed;bottom:-20%;right:-10%;
+      width:60vw;height:60vw;
+      background:radial-gradient(circle,rgba(0,240,255,.06) 0%,transparent 70%);
+      pointer-events:none;z-index:0;
+    }
+
+    /* ══ LAYOUT ══ */
+    .z{position:relative;z-index:1}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+
+    /* ══ NAV ══ */
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:200;
+      background:rgba(5,5,5,.75);backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav-inner{
+      max-width:1200px;margin:0 auto;padding:0 24px;
+      height:58px;display:flex;align-items:center;justify-content:space-between;
+    }
+    .nav-logo{font-family:var(--mono);font-size:1.05rem;font-weight:700;letter-spacing:-.03em;cursor:none}
+    .nav-logo span{color:var(--primary)}
+    .nav-links{display:flex;gap:24px;font-size:.85rem;font-weight:500}
+    .nav-links a{color:var(--muted);transition:color .2s;cursor:none}
+    .nav-links a:hover{color:var(--text)}
+    .theme-btn{
+      background:var(--surf);border:1px solid var(--border);
+      width:36px;height:36px;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      cursor:none;color:var(--text);transition:all .2s;
+    }
+    .theme-btn:hover{background:var(--surf-h)}
+    @media(max-width:640px){.nav-links{display:none}}
+
+    /* ══ HERO — tight spacing ══ */
+    .hero{
+      padding:72px 0 32px; /* was 100px / 60px */
+      display:flex;flex-direction:column;justify-content:flex-start;
+    }
+    .hero-tag{
+      display:inline-flex;align-items:center;gap:8px;
+      font-family:var(--mono);font-size:.8rem;color:var(--primary);
+      margin-bottom:14px;
+    }
+    .hero-tag::before{content:'';display:inline-block;width:26px;height:1px;background:var(--primary)}
+    .hero h1{
+      font-size:clamp(2.6rem,7vw,5.8rem);font-weight:900;
+      line-height:1.03;letter-spacing:-.04em;margin-bottom:12px;
+    }
+    .hero h2{
+      font-size:clamp(1.3rem,3vw,2.3rem);font-weight:700;
+      color:var(--muted);line-height:1.25;letter-spacing:-.02em;
+      margin-bottom:18px;max-width:660px;
+    }
+    .hero h2 .hi{
+      background:linear-gradient(90deg,var(--primary),var(--blue));
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+    }
+    .hero-sub{color:var(--muted);font-size:1rem;max-width:520px;margin-bottom:28px;line-height:1.7}
+    .hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+
+    /* magnetic button */
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:11px 26px;border-radius:8px;font-weight:600;font-size:.88rem;
+      transition:all .2s var(--ease);cursor:none;border:none;
+      position:relative;overflow:hidden;
+    }
+    .btn::after{
+      content:'';position:absolute;inset:0;
+      background:radial-gradient(circle at var(--bx,50%) var(--by,50%),rgba(255,255,255,.15),transparent 60%);
+      opacity:0;transition:opacity .3s;pointer-events:none;
+    }
+    .btn:hover::after{opacity:1}
+    .btn-solid{background:var(--primary);color:#000}
+    .btn-solid:hover{box-shadow:0 0 28px rgba(167,139,250,.55);transform:translateY(-2px)}
+    .btn-ghost{background:var(--surf);color:var(--text);border:1px solid var(--border);backdrop-filter:blur(8px)}
+    .btn-ghost:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px)}
+
+    .loc-badge{
+      display:inline-flex;align-items:center;gap:6px;
+      font-size:.78rem;color:var(--muted);
+      border:1px solid var(--border);padding:5px 14px;
+      border-radius:20px;background:var(--surf);backdrop-filter:blur(8px);
+    }
+
+    /* glitch */
+    .gw{position:relative;display:inline-block}
+    .gw:hover h1{animation:glitch .4s infinite}
+    .gw:hover h1::before,.gw:hover h1::after{
+      content:attr(data-text);position:absolute;top:0;left:0;
+      width:100%;height:100%;opacity:.7;
+    }
+    .gw:hover h1::before{color:var(--cyan);z-index:-1;animation:g1 .4s infinite}
+    .gw:hover h1::after{color:#ff00ff;z-index:-2;animation:g2 .4s infinite}
+    @keyframes g1{0%{clip-path:inset(20% 0 60% 0);transform:translate(-3px,1px)}100%{clip-path:inset(60% 0 10% 0);transform:translate(2px,-1px)}}
+    @keyframes g2{0%{clip-path:inset(50% 0 20% 0);transform:translate(3px,-1px)}100%{clip-path:inset(10% 0 70% 0);transform:translate(-2px,1px)}}
+
+    /* ══ SECTION — tighter top gap ══ */
+    section{padding:64px 0} /* was 96px */
+    .sec-label{
+      font-family:var(--mono);font-size:.75rem;color:var(--primary);
+      letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;
+    }
+    .sec-title{
+      font-size:clamp(1.8rem,3vw,2.8rem);font-weight:900;
+      letter-spacing:-.04em;margin-bottom:10px;
+    }
+    .sec-sub{color:var(--muted);max-width:520px;margin-bottom:44px;line-height:1.7;font-size:.95rem}
+
+    /* ══ ABOUT CARDS ══ */
+    .about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px;margin-bottom:36px}
+    .ac{
+      background:var(--surf);border:1px solid var(--border);
+      border-radius:14px;padding:24px;backdrop-filter:blur(12px);
+      transition:all .3s var(--ease);
+    }
+    .ac:hover{border-color:var(--border-h);background:var(--surf-h);transform:translateY(-4px);box-shadow:var(--glow)}
+    .ac-icon{font-size:1.3rem;margin-bottom:10px}
+    .ac h4{font-size:.92rem;font-weight:700;color:var(--primary);margin-bottom:5px}
+    .ac p{font-size:.85rem;color:var(--muted);line-height:1.6}
+
+    .pill-row{display:flex;flex-wrap:wrap;gap:8px}
+    .pill{
+      padding:4px 13px;border:1px solid var(--border);border-radius:4px;
+      font-family:var(--mono);font-size:.72rem;color:var(--muted);
+      background:var(--surf);backdrop-filter:blur(6px);cursor:none;
+      transition:all .2s;
+    }
+    .pill:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px)}
+
+    /* ══ TIMELINE ══ */
+    .tl{position:relative;padding-left:24px;border-left:1px solid var(--border)}
+    .tl-item{position:relative;margin-bottom:44px}
+    .tl-item:last-child{margin-bottom:0}
+    .tl-dot{
+      position:absolute;left:-31px;top:5px;
+      width:12px;height:12px;background:var(--primary);
+      border-radius:50%;box-shadow:0 0 10px var(--primary);
+      animation:pulse-dot 2s ease-in-out infinite;
+    }
+    @keyframes pulse-dot{
+      0%,100%{box-shadow:0 0 10px var(--primary)}
+      50%{box-shadow:0 0 20px var(--primary),0 0 40px rgba(167,139,250,.3)}
+    }
+    .tl-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:3px}
+    .tl-title{font-size:1rem;font-weight:700}
+    .tl-date{font-family:var(--mono);font-size:.72rem;color:var(--primary);padding-top:3px;white-space:nowrap}
+    .tl-co{color:var(--muted);font-size:.85rem;margin-bottom:8px}
+    .tl-ul{list-style:none;display:flex;flex-direction:column;gap:4px}
+    .tl-ul li{font-size:.83rem;color:var(--muted);padding-left:13px;position:relative;line-height:1.6}
+    .tl-ul li::before{content:'▸';position:absolute;left:0;color:var(--primary)}
+    .tl-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+    .tl-tag{font-family:var(--mono);font-size:.65rem;padding:2px 8px;border-radius:3px;border:1px solid var(--border);background:var(--surf);color:var(--muted)}
+
+    /* ══ PROJECT TABS ══ */
+    .tabs{display:flex;gap:8px;margin-bottom:30px;flex-wrap:wrap}
+    .tab{
+      padding:7px 16px;border-radius:30px;border:1px solid var(--border);
+      background:var(--surf);color:var(--muted);font-size:.8rem;
+      font-family:var(--mono);cursor:none;transition:all .2s;backdrop-filter:blur(6px);
+    }
+    .tab:hover{border-color:var(--text);color:var(--text)}
+    .tab.active{background:rgba(167,139,250,.1);border-color:var(--primary);color:var(--primary);box-shadow:0 0 12px rgba(167,139,250,.1)}
+
+    /* featured project cards */
+    .proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+    .card{
+      background:var(--surf);border:1px solid var(--border);border-radius:14px;
+      padding:24px;display:flex;flex-direction:column;height:100%;
+      cursor:none;transition:transform .15s,box-shadow .3s,border-color .2s;
+      position:relative;overflow:hidden;backdrop-filter:blur(12px);
+      transform-style:preserve-3d;
+    }
+    .card.hidden{display:none}
+    .card::after{
+      content:'';position:absolute;inset:0;
+      background:radial-gradient(500px circle at var(--mx,50%) var(--my,50%),rgba(167,139,250,.07),transparent 40%);
+      opacity:0;transition:opacity .3s;pointer-events:none;z-index:1;
+    }
+    .card:hover::after{opacity:1}
+    .card:hover{border-color:var(--border-h);box-shadow:var(--glow)}
+    .cc{position:relative;z-index:2;display:flex;flex-direction:column;height:100%}
+    .ch{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px}
+    .ci{color:var(--primary);width:30px;height:30px}
+    .ce{color:var(--muted);width:16px;height:16px;opacity:.4;transition:all .2s}
+    .card:hover .ce{opacity:1;color:var(--text);transform:translate(2px,-2px)}
+    .card h3{font-size:1.05rem;font-weight:700;margin-bottom:6px}
+    .card p{font-size:.86rem;color:var(--muted);line-height:1.6;flex-grow:1;margin-bottom:16px}
+    .ctags{display:flex;flex-wrap:wrap;gap:6px;font-size:.68rem;font-family:var(--mono);color:var(--muted);margin-top:auto}
+
+    /* ══ ALL WORK ══ */
+    .all-work-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
+    .aw-card{
+      background:var(--surf);border:1px solid var(--border);
+      border-radius:10px;padding:18px 20px;
+      display:flex;align-items:flex-start;gap:12px;
+      transition:all .25s;
+    }
+    .aw-card:hover{border-color:var(--border-h);background:var(--surf-h);transform:translateY(-2px)}
+    .aw-icon{font-size:1rem;margin-top:2px;flex-shrink:0}
+    .aw-body{flex:1;min-width:0}
+    .aw-row{display:flex;align-items:center;gap:7px;margin-bottom:3px;flex-wrap:wrap}
+    .aw-name{font-weight:700;font-size:.9rem}
+    .aw-badge{font-family:var(--mono);font-size:.6rem;padding:2px 6px;border-radius:3px;border:1px solid var(--border);color:var(--muted)}
+    .aw-badge.pub{border-color:rgba(34,197,94,.3);color:#22c55e}
+    .aw-desc{font-size:.79rem;color:var(--muted);line-height:1.5}
+    .all-work-meta{display:flex;justify-content:flex-end;font-family:var(--mono);font-size:.72rem;color:var(--muted);margin-top:16px;padding-top:14px;border-top:1px solid var(--border)}
+
+    /* ══ AWARDS ══ */
+    .awards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .aw2{background:var(--surf);border:1px solid var(--border);border-radius:12px;padding:18px 20px;backdrop-filter:blur(10px);transition:all .2s}
+    .aw2:hover{border-color:var(--border-h);transform:translateY(-3px);box-shadow:var(--glow)}
+    .aw2-emoji{font-size:1.4rem;margin-bottom:8px}
+    .aw2-title{font-weight:700;font-size:.88rem;margin-bottom:3px}
+    .aw2-sub{font-size:.76rem;color:var(--muted)}
+
+    /* ══ CONTACT ══ */
+    .contact-box{
+      background:var(--surf);border:1px solid var(--border);
+      border-radius:16px;padding:40px;backdrop-filter:blur(12px);
+      max-width:660px;margin:0 auto;
+    }
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .form-group{display:flex;flex-direction:column;gap:5px;margin-bottom:16px}
+    .form-group label{font-size:.76rem;font-family:var(--mono);color:var(--muted);letter-spacing:.05em}
+    .form-control{
+      background:rgba(255,255,255,.04);border:1px solid var(--border);
+      border-radius:8px;padding:10px 13px;color:var(--text);
+      font-family:'Inter',sans-serif;font-size:.87rem;
+      transition:border-color .2s;outline:none;resize:none;cursor:none;
+    }
+    .form-control:focus{border-color:var(--primary)}
+    .form-control::placeholder{color:var(--muted);opacity:.6}
+    .form-note{font-size:.72rem;color:var(--muted);margin-top:5px}
+    @media(max-width:560px){.form-row{grid-template-columns:1fr}}
+
+    /* ══ FOOTER ══ */
+    footer{border-top:1px solid var(--border);padding:56px 0 36px;text-align:center;position:relative;z-index:1}
+    .f-title{font-size:clamp(1.8rem,6vw,3.8rem);font-weight:900;letter-spacing:-.04em;margin-bottom:10px}
+    .f-title span{color:var(--primary)}
+    footer p{color:var(--muted);margin-bottom:24px;font-size:.88rem}
+    .socials{display:flex;justify-content:center;gap:16px;margin-bottom:28px;flex-wrap:wrap}
+    .soc{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:.7rem;color:var(--muted);transition:all .2s;cursor:none}
+    .soc:hover{color:var(--primary);transform:translateY(-3px)}
+    .soc svg{width:19px;height:19px}
+    .copy{font-size:.73rem;color:var(--muted);font-family:var(--mono)}
+
+    /* ══ FADE-UP ANIMS ══ */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .fu{animation:fadeUp .6s var(--ease) both}
+    .d1{animation-delay:.08s}.d2{animation-delay:.16s}.d3{animation-delay:.24s}.d4{animation-delay:.32s}
+
+    /* Floating glow orbs on hero */
+    .orb{
+      position:absolute;border-radius:50%;pointer-events:none;
+      animation:float-orb 8s ease-in-out infinite;
+    }
+    @keyframes float-orb{
+      0%,100%{transform:translateY(0) scale(1)}
+      50%{transform:translateY(-20px) scale(1.05)}
+    }
+
+    /* Gravity-attract shimmer on section borders */
+    section{position:relative}
+    section::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:1px;
+      background:linear-gradient(90deg,transparent,var(--primary),transparent);
+      opacity:0;transition:opacity .4s;
+    }
+    section:hover::before{opacity:.3}
+
+    @media(max-width:640px){
+      .proj-grid,.all-work-grid,.about-grid,.awards-grid{grid-template-columns:1fr}
+      .contact-box{padding:24px 18px}
+    }
+  </style>
+</head>
+<body>
+
+<!-- Custom gravity cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div id="cursor-field"></div>
+
+<div id="particles-js"></div>
+
+<!-- ── NAV ─────────────────────────── -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">Akshar<span>.</span></div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#all-work">All Work</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="theme-btn" id="theme-btn" aria-label="Toggle theme">
+      <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg id="sun-icon" style="display:none" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="wrap z">
+
+  <!-- ── HERO ──────────────────────────── -->
+  <section class="hero">
+    <div class="hero-tag fu">available for collaborations</div>
+    <div class="gw fu d1">
+      <h1 data-text="Akshar Nath Gorain">Akshar Nath Gorain</h1>
+    </div>
+    <h2 class="fu d2">Building <span class="hi">AI Systems</span> · Shipping code that matters.</h2>
+    <p class="hero-sub fu d3">Systems Engineer &amp; AI Researcher at Techno India University. Researching Knowledge Distillation, building production full-stack platforms, and shipping intelligent systems — one commit at a time.</p>
+    <div class="hero-btns fu d4">
+      <a href="https://github.com/Ak-N-G/ak-n-g.github.io/blob/main/RESUME.pdf" target="_blank" class="btn btn-solid mag-btn">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Resume
+      </a>
+      <a href="#projects" class="btn btn-ghost mag-btn">Let's Build ↓</a>
+    </div>
+    <div class="loc-badge fu d4">
+      <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Kolkata, West Bengal, India
+    </div>
+  </section>
+
+  <!-- ── ABOUT ──── -->
+  <section id="about" style="padding-top:0;border-top:1px solid var(--border)">
+    <div class="sec-label">// about me</div>
+    <h2 class="sec-title">The Mission.</h2>
+    <p class="sec-sub">B.Tech CSE, 2nd year, Techno India University — bridging cutting-edge AI research with production architectures.</p>
+    <div class="about-grid">
+      <div class="ac"><div class="ac-icon">🧠</div><h4>AI Researcher</h4><p>Knowledge Distillation and Computer Vision. INT8 Quantization, YOLOv8 pipelines, MSER ensembles. <strong style="color:var(--primary)">🏆 COMSYS 2026 International Champion</strong> — Škoda Auto University, Czech Republic.</p></div>
+      <div class="ac"><div class="ac-icon">🐾</div><h4>Mobile Dev @ CURAA</h4><p>Cross-platform Flutter UI for CURAWAVE's pet-care ecosystem. Native 60fps rendering. Collaborated with Sourodyuti Biswas Sanyal on CURAA &amp; Delta Terminal.</p></div>
+      <div class="ac"><div class="ac-icon">⚡</div><h4>Full-Stack Engineer</h4><p>ShareBite (Next.js 14 + PostgreSQL), VeriFi blockchain auth, Delta Terminal algo-trading system. Systems that ship and scale.</p></div>
+    </div>
+    <div class="pill-row">
+      <span class="pill">Python</span><span class="pill">PyTorch</span><span class="pill">Next.js 14</span>
+      <span class="pill">Flutter</span><span class="pill">C/C++</span><span class="pill">FastAPI</span>
+      <span class="pill">Solidity</span><span class="pill">PostgreSQL</span><span class="pill">AWS</span>
+      <span class="pill">Docker</span><span class="pill">Bash/Termux</span><span class="pill">YOLOv8</span>
+      <span class="pill">Gemini API</span><span class="pill">OpenMMLab</span>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE ── -->
+  <section id="experience" style="border-top:1px solid var(--border)">
+    <div class="sec-label">// experience</div>
+    <h2 class="sec-title">The Timeline.</h2>
+    <p class="sec-sub">From first commit to research labs, startups, and national hackathon podiums.</p>
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-row"><div class="tl-title">Undergraduate AI Researcher</div><div class="tl-date">Aug 2024 – Present</div></div>
+        <div class="tl-co">Techno India University · Computer Vision</div>
+        <ul class="tl-ul">
+          <li>Innovating core pipelines for low-compute deployment — Knowledge Distillation &amp; INT8 Quantization.</li>
+          <li>Pioneering diagnostic medical imaging compression for edge-device runtime optimizations.</li>
+        </ul>
+        <div class="tl-tags"><span class="tl-tag">PyTorch</span><span class="tl-tag">Python</span><span class="tl-tag">Edge AI</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-row"><div class="tl-title">Mobile App UI Developer</div><div class="tl-date">Nov 2025 – Present</div></div>
+        <div class="tl-co">CURAA · CURAWAVE LLP</div>
+        <ul class="tl-ul">
+          <li>Architected cross-platform Flutter UI flows for a 5-service pet-care ecosystem.</li>
+          <li>Engineered custom rendering at native 60fps. Collaborated with Sourodyuti on CURAA &amp; Delta Terminal.</li>
+        </ul>
+        <div class="tl-tags"><span class="tl-tag">Flutter</span><span class="tl-tag">Dart</span><span class="tl-tag">Node.js</span><span class="tl-tag">MongoDB</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-row"><div class="tl-title">AI Automation Intern</div><div class="tl-date">June 2026 – July 2026</div></div>
+        <div class="tl-co">AICTE – IBM SkillsBuild · Virtual</div>
+        <ul class="tl-ul"><li>Orchestrating intelligent automation workflows, AI agents, and enterprise AI integrations.</li></ul>
+        <div class="tl-tags"><span class="tl-tag">AI Agents</span><span class="tl-tag">Automation</span><span class="tl-tag">IBM</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-row"><div class="tl-title">Cybersecurity Intern</div><div class="tl-date">June 2026 – Aug 2026</div></div>
+        <div class="tl-co">AICTE – EduSkills (Palo Alto Networks) · Virtual</div>
+        <ul class="tl-ul"><li>Enterprise network security, threat intelligence platforms, and SOAR automation.</li></ul>
+        <div class="tl-tags"><span class="tl-tag">Cybersecurity</span><span class="tl-tag">Palo Alto</span><span class="tl-tag">SOAR</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-row"><div class="tl-title">Government ML Intern</div><div class="tl-date">Past</div></div>
+        <div class="tl-co">AICTE · Remote</div>
+        <ul class="tl-ul"><li>Developed ML models predicting 6 major water pollutants using historical station data.</li></ul>
+        <div class="tl-tags"><span class="tl-tag">Python</span><span class="tl-tag">ML</span><span class="tl-tag">AICTE</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects" style="border-top:1px solid var(--border)">
+    <div class="sec-label">// selected works</div>
+    <h2 class="sec-title">Systems I've Shipped.</h2>
+    <p class="sec-sub">From hackathon-winning CV pipelines to production full-stack platforms.</p>
+    <div class="tabs">
+      <button class="tab active" data-filter="all">All</button>
+      <button class="tab" data-filter="research">AI &amp; Research</button>
+      <button class="tab" data-filter="systems">Systems &amp; Web3</button>
+      <button class="tab" data-filter="apps">Full-Stack &amp; Apps</button>
+    </div>
+    <div class="proj-grid">
+
+      <article class="card" data-category="apps" onclick="window.open('https://sharebite-platform.vercel.app','_blank')">
+        <div class="cc"><div class="ch">
+          <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          <svg class="ce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </div>
+        <h3>ShareBite Platform</h3>
+        <p>Production-grade food rescue engine aligned with UN SDG 2. Smart real-time surplus ledger with automated category safety windows for cross-role logging.</p>
+        <div class="ctags"><span>Next.js 14</span><span>PostgreSQL</span><span>NextAuth.js</span></div></div>
+      </article>
+
+      <article class="card" data-category="research" onclick="window.open('https://github.com/workforakng/Vision-Knowledge-Distillation','_blank')">
+        <div class="cc"><div class="ch">
+          <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          <svg class="ce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </div>
+        <h3>Vision Knowledge Distillation</h3>
+        <p>PyTorch teacher-student framework: ResNet18 → MobileNetV2 on CIFAR-10. AMP, gradient clipping, automatic tracking, and edge-deployment configs.</p>
+        <div class="ctags"><span>PyTorch</span><span>Computer Vision</span><span>Python</span></div></div>
+      </article>
+
+      <article class="card" data-category="apps" onclick="window.open('https://curaa.co.in','_blank')">
+        <div class="cc"><div class="ch">
+          <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          <svg class="ce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </div>
+        <h3>CURAA — Pet Care Ecosystem</h3>
+        <p>Cross-platform Flutter UI for a 5-microservice pet-care platform. Native 60fps rendering, vet &amp; grooming scheduling. Built with Sourodyuti at CURAWAVE LLP.</p>
+        <div class="ctags"><span>Flutter</span><span>Dart</span><span>Node.js</span><span>MongoDB</span></div></div>
+      </article>
+
+      <article class="card" data-category="systems" onclick="void(0)">
+        <div class="cc"><div class="ch">
+          <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          <span style="font-family:var(--mono);font-size:.58rem;color:var(--muted);border:1px solid var(--border);padding:2px 6px;border-radius:3px">private</span>
+        </div>
+        <h3>Delta Terminal</h3>
+        <p>Institutional algo-trading system co-built with Sourodyuti. Δ-THETA Options Engine, Five-Gate regime filter (ADX, IV Rank, Vol Ratio), multi-alpha interference. Runs on Ubuntu &amp; Termux/ARM64.</p>
+        <div class="ctags"><span>Python</span><span>Flask</span><span>AsyncIO</span><span>Socket.IO</span></div></div>
+      </article>
+
+      <article class="card" data-category="systems" onclick="window.open('https://github.com/workforakng/VeriFi','_blank')">
+        <div class="cc"><div class="ch">
+          <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <svg class="ce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </div>
+        <h3>VeriFi — Blockchain Auth</h3>
+        <p>Ethereum dApp for on-chain verification of certificates, attendance, and payments. SHA-256 + digital signatures on Edu Net Blockchain infrastructure.</p>
+        <div class="ctags"><span>Solidity</span><span>Web3</span><span>Next.js</span></div></div>
+      </article>
+
+      <article class="card" data-category="systems" onclick="window.open('https://github.com/workforakng/ssh_termux_auto','_blank')">
+        <div class="cc"><div class="ch">
+          <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <svg class="ce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </div>
+        <h3>SSH Termux Automation</h3>
+        <p>Server automation suite: IP change detection, failed login monitoring, battery alerts via Telegram API. Production-tested on Termux/Linux.</p>
+        <div class="ctags"><span>Bash</span><span>Linux</span><span>Termux</span><span>Automation</span></div></div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ── ALL WORK ── -->
+  <section id="all-work" style="border-top:1px solid var(--border)">
+    <div class="sec-label">// all work</div>
+    <h2 class="sec-title">Everything I've Built.</h2>
+    <p class="sec-sub">Open source and private — AI pipelines, system automation, blockchain, and more.</p>
+    <div class="all-work-grid">
+      <div class="aw-card"><div class="aw-icon">🍽️</div><div class="aw-body"><div class="aw-row"><span class="aw-name">ShareBite</span><span class="aw-badge pub">public</span></div><p class="aw-desc">Full-stack food rescue platform — UN SDG 2, real-time ledger, cross-role logging.</p></div></div>
+      <div class="aw-card"><div class="aw-icon">🐾</div><div class="aw-body"><div class="aw-row"><span class="aw-name">CURAA</span><span class="aw-badge">private</span></div><p class="aw-desc">Flutter UI for CURAWAVE pet-care ecosystem — 5-microservice architecture.</p></div></div>
+      <div class="aw-card"><div class="aw-icon">⚡</div><div class="aw-body"><div class="aw-row"><span class="aw-name">Delta Terminal</span><span class="aw-badge">private</span></div><p class="aw-desc">Institutional algo-trading — Five-Gate theta engine, multi-alpha interference. Co-built with Sourodyuti.</p></div></div>
+      <div class="aw-card"><div class="aw-icon">🧠</div><div class="aw-body"><div class="aw-row"><span class="aw-name">Vision KD</span><span class="aw-badge pub">public</span></div><p class="aw-desc">PyTorch teacher-student distillation — ResNet18 → MobileNetV2, CIFAR-10.</p></div></div>
+      <div class="aw-card"><div class="aw-icon">🔗</div><div class="aw-body"><div class="aw-row"><span class="aw-name">VeriFi</span><span class="aw-badge pub">public</span></div><p class="aw-desc">On-chain document verification — SHA-256 + Ethereum smart contracts.</p></div></div>
+      <div class="aw-card"><div class="aw-icon">💧</div><div class="aw-body"><div class="aw-row"><span class="aw-name">Water Quality AI</span><span class="aw-badge pub">public</span></div><p class="aw-desc">ML models predicting 6 water pollutants — AICTE Gov. internship project.</p></div></div>
+      <div class="aw-card"><div class="aw-icon">🏥</div><div class="aw-body"><div class="aw-row"><span class="aw-name">Jīva Health</span><span class="aw-badge">private</span></div><p class="aw-desc">Healthcare record digitization — AI-powered OCR/NLP extraction for India.</p></div></div>
+      <div class="aw-card"><div class="aw-icon">🤖</div><div class="aw-body"><div class="aw-row"><span class="aw-name">Physics Solver AI</span><span class="aw-badge pub">public</span></div><p class="aw-desc">Step-by-step physics problem solver powered by Gemini via Express backend.</p></div></div>
+      <div class="aw-card"><div class="aw-icon">🌦️</div><div class="aw-body"><div class="aw-row"><span class="aw-name">FlintWeatherAI</span><span class="aw-badge pub">public</span></div><p class="aw-desc">Lightweight AI weather assistant aggregating free weather provider APIs.</p></div></div>
+      <div class="aw-card"><div class="aw-icon">💻</div><div class="aw-body"><div class="aw-row"><span class="aw-name">SSH Termux Auto</span><span class="aw-badge pub">public</span></div><p class="aw-desc">IP monitoring, failed login alerts, battery notifications via Telegram.</p></div></div>
+      <div class="aw-card"><div class="aw-icon">🎰</div><div class="aw-body"><div class="aw-row"><span class="aw-name">Prediction Backend</span><span class="aw-badge">private</span></div><p class="aw-desc">Flask API with worker processes, simulator blueprint, and pattern recognition.</p></div></div>
+      <div class="aw-card"><div class="aw-icon">🩸</div><div class="aw-body"><div class="aw-row"><span class="aw-name">Blood Donation BDMS</span><span class="aw-badge pub">public</span></div><p class="aw-desc">Web app for donor registration, inventory tracking, and request management.</p></div></div>
+      <div class="aw-card"><div class="aw-icon">📞</div><div class="aw-body"><div class="aw-row"><span class="aw-name">Phonebook Manager</span><span class="aw-badge pub">public</span></div><p class="aw-desc">Contact manager with C backend and PHP frontend — CRUD with file storage.</p></div></div>
+    </div>
+    <div class="all-work-meta">13 projects · 7 public · 6 private</div>
+  </section>
+
+  <!-- ── AWARDS ── -->
+  <section id="awards" style="border-top:1px solid var(--border)">
+    <div class="sec-label">// recognition</div>
+    <h2 class="sec-title">Highlights.</h2>
+    <div class="awards-grid">
+      <div class="aw2"><div class="aw2-emoji">🏆</div><div class="aw2-title">International Champion — COMSYS Hackathon 7</div><div class="aw2-sub">7th Intl. Conference on Frontiers in Computing &amp; Systems · Škoda Auto University, Czech Republic · Team Vic-Trio (Akshar, Sourodyuti &amp; Subhodip) · Rank #1 · Score 0.755</div></div>
+      <div class="aw2"><div class="aw2-emoji">☁️</div><div class="aw2-title">AWS Academy Graduate</div><div class="aw2-sub">Data Engineering Certified · Dec 2025</div></div>
+      <div class="aw2"><div class="aw2-emoji">🔬</div><div class="aw2-title">Active AI Researcher</div><div class="aw2-sub">Knowledge Distillation · Computer Vision · TIU</div></div>
+      <div class="aw2"><div class="aw2-emoji">🛡️</div><div class="aw2-title">Cybersecurity Intern</div><div class="aw2-sub">Palo Alto Networks · AICTE EduSkills · 2026</div></div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" style="border-top:1px solid var(--border)">
+    <div class="sec-label">// contact</div>
+    <h2 class="sec-title">Let's Work Together.</h2>
+    <p class="sec-sub">Open to research collaborations, internships, and building things that matter.</p>
+    <div class="contact-box">
+      <p style="font-size:.87rem;color:var(--muted);margin-bottom:24px">
+        Contact me directly at <a href="mailto:workforakng@gmail.com" style="color:var(--primary)">workforakng@gmail.com</a> or drop your info here.
+      </p>
+      <form onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full name</label>
+            <input id="f-name" class="form-control" type="text" placeholder="Your Name" required/>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input id="f-email" class="form-control" type="email" placeholder="you@example.com" required/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Your Message</label>
+          <textarea id="f-msg" class="form-control" rows="4" placeholder="Tell me about your project..." required></textarea>
+          <div class="form-note">I'll never share your data with anyone else. Pinky promise! 🤙</div>
+        </div>
+        <button type="submit" class="btn btn-solid mag-btn" style="width:100%;justify-content:center">Send Message ↗</button>
+      </form>
+    </div>
+  </section>
+
+</div><!-- /wrap -->
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="wrap z">
+    <div class="f-title">LET'S WORK<br/><span>TOGETHER</span></div>
+    <p>Reach out at <a href="mailto:workforakng@gmail.com" style="color:var(--primary)">workforakng@gmail.com</a></p>
+    <div class="socials">
+      <a href="https://github.com/workforakng" target="_blank" class="soc"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a>
+      <a href="https://linkedin.com/in/ak-n-g" target="_blank" class="soc"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
+      <a href="mailto:workforakng@gmail.com" class="soc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a>
+      <a href="https://twitter.com/Ak_N_G" target="_blank" class="soc"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Twitter</a>
+    </div>
+    <div class="copy">© 2026 Akshar Nath Gorain. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- Particles -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  /* ── PARTICLES (increased to 110) ── */
+  function initParticles(theme){
+    const col  = theme==='dark' ? '#a78bfa' : '#7c3aed';
+    const link = theme==='dark' ? '#ffffff'  : '#0f172a';
+    particlesJS('particles-js',{
+      particles:{
+        number:{value:110, density:{enable:true,value_area:800}},
+        color:{value:col},shape:{type:'circle'},
+        opacity:{value:.28,random:true,anim:{enable:true,speed:1,opacity_min:.05,sync:false}},
+        size:{value:3,random:true,anim:{enable:true,speed:2,size_min:.3,sync:false}},
+        line_linked:{enable:true,distance:140,color:link,opacity:.12,width:1},
+        move:{
+          enable:true,speed:1.8,direction:'none',
+          random:true,straight:false,out_mode:'out',bounce:false,
+          attract:{enable:true,rotateX:600,rotateY:1200}
+        }
+      },
+      interactivity:{
+        detect_on:'canvas',
+        events:{
+          onhover:{enable:true,mode:'attract'},   /* gravity attract */
+          onclick:{enable:true,mode:'push'},
+          resize:true
+        },
+        modes:{
+          attract:{distance:200,duration:.4,speed:1},
+          push:{particles_nb:6},
+          grab:{distance:160,line_linked:{opacity:.4}}
+        }
+      },
+      retina_detect:true
+    });
+  }
+  initParticles('dark');
+
+  /* ── GRAVITY CURSOR ── */
+  const cur  = document.getElementById('cursor');
+  const ring = document.getElementById('cursor-ring');
+  const field= document.getElementById('cursor-field');
+  let mx=0, my=0, rx=0, ry=0, fx=0, fy=0;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cur.style.left  = mx+'px'; cur.style.top  = my+'px';
+    // ring & field lag behind for elastic feel
+  });
+
+  // Elastic follow for ring + field (gravity-well drag)
+  function animateCursor(){
+    rx += (mx - rx) * 0.18;
+    ry += (my - ry) * 0.18;
+    fx += (mx - fx) * 0.08;
+    fy += (my - fy) * 0.08;
+    ring.style.left  = rx+'px'; ring.style.top  = ry+'px';
+    field.style.left = fx+'px'; field.style.top = fy+'px';
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+
+  // Hide cursor when leaving window
+  document.addEventListener('mouseleave', ()=>{ cur.style.opacity='0'; ring.style.opacity='0'; });
+  document.addEventListener('mouseenter', ()=>{ cur.style.opacity='1'; ring.style.opacity='1'; });
+
+  /* ── MAGNETIC BUTTONS ── */
+  document.querySelectorAll('.mag-btn').forEach(btn => {
+    btn.addEventListener('mousemove', e => {
+      const r = btn.getBoundingClientRect();
+      const bx = e.clientX - r.left;
+      const by = e.clientY - r.top;
+      const cx = r.width  / 2;
+      const cy = r.height / 2;
+      const dx = (bx - cx) * 0.25;
+      const dy = (by - cy) * 0.25;
+      btn.style.transform = `translate(${dx}px, ${dy}px)`;
+      btn.style.setProperty('--bx', bx+'px');
+      btn.style.setProperty('--by', by+'px');
+    });
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = '';
+    });
+  });
+
+  /* ── GRAVITY TRAIL (Antigravity-style floating orbs) ── */
+  const TRAIL_COUNT = 8;
+  const trail = [];
+  for(let i=0;i<TRAIL_COUNT;i++){
+    const orb = document.createElement('div');
+    orb.style.cssText = `
+      position:fixed;width:${4+i*1.5}px;height:${4+i*1.5}px;
+      border-radius:50%;pointer-events:none;z-index:9996;
+      background:rgba(167,139,250,${0.3 - i*0.03});
+      transform:translate(-50%,-50%);
+      filter:blur(${i}px);
+      transition:none;
+    `;
+    document.body.appendChild(orb);
+    trail.push({el:orb, x:0, y:0});
+  }
+  function animTrail(){
+    let lx=mx, ly=my;
+    trail.forEach((t,i)=>{
+      t.x += (lx - t.x) * (0.25 - i*0.025);
+      t.y += (ly - t.y) * (0.25 - i*0.025);
+      t.el.style.left = t.x+'px';
+      t.el.style.top  = t.y+'px';
+      lx = t.x; ly = t.y;
+    });
+    requestAnimationFrame(animTrail);
+  }
+  animTrail();
+
+  /* ── THEME TOGGLE ── */
+  const html = document.documentElement;
+  document.getElementById('theme-btn').addEventListener('click',()=>{
+    const next = html.getAttribute('data-theme')==='dark'?'light':'dark';
+    html.setAttribute('data-theme',next);
+    document.getElementById('moon-icon').style.display = next==='dark'?'block':'none';
+    document.getElementById('sun-icon').style.display  = next==='light'?'block':'none';
+    initParticles(next);
+  });
+
+  /* ── TABS ── */
+  document.querySelectorAll('.tab').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const f=btn.dataset.filter;
+      document.querySelectorAll('.card').forEach(c=>{
+        if(f==='all'||c.dataset.category===f){c.classList.remove('hidden');c.style.animation='fadeUp .4s ease forwards'}
+        else c.classList.add('hidden');
+      });
+    });
+  });
+
+  /* ── 3D TILT + SPOTLIGHT ── */
+  document.querySelectorAll('.card').forEach(card=>{
+    card.addEventListener('mousemove',e=>{
+      const r=card.getBoundingClientRect();
+      const x=e.clientX-r.left, y=e.clientY-r.top;
+      card.style.setProperty('--mx',`${x}px`);
+      card.style.setProperty('--my',`${y}px`);
+      const rx=((y-r.height/2)/r.height)*-8;
+      const ry=((x-r.width/2)/r.width)*8;
+      card.style.transform=`perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) scale(1.02)`;
+    });
+    card.addEventListener('mouseleave',()=>{
+      card.style.transform='perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+    });
+  });
+
+  /* ── CONTACT FORM ── */
+  function handleSubmit(e){
+    e.preventDefault();
+    const name=document.getElementById('f-name').value;
+    const email=document.getElementById('f-email').value;
+    const msg=document.getElementById('f-msg').value;
+    const body=encodeURIComponent(`From: ${name} <${email}>\n\n${msg}`);
+    window.location.href=`mailto:workforakng@gmail.com?subject=Portfolio%20Inquiry%20from%20${encodeURIComponent(name)}&body=${body}`;
+  }
+
+  /* ── SCROLL REVEAL ── */
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.style.animation='fadeUp .6s cubic-bezier(.4,0,.2,1) both';
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.1});
+  document.querySelectorAll('.ac,.card,.aw-card,.aw2,.tl-item').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
