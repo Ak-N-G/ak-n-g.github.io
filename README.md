@@ -4,7 +4,7 @@
 
 <br/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&pause=1000&color=A78BFA&center=true&vCenter=true&width=700&lines=Mobile+App+UI+Developer+%40+CURAA;AI+Researcher+%7C+Knowledge+Distillation;%F0%9F%8F%86+COMSYS+2026+International+Champion;Full-Stack+Engineer+%7C+Next.js+%7C+PostgreSQL;Building+Intelligent+Systems)](https://github.com/workforakng)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&pause=1000&color=A78BFA&center=true&vCenter=true&width=700&lines=Mobile+App+Developer+%40+CURAA;AI+Researcher+%7C+Knowledge+Distillation;%F0%9F%8F%86+COMSYS+2026+International+Champion;Full-Stack+Engineer+%7C+Next.js+%7C+PostgreSQL;Building+Intelligent+Systems)](https://github.com/workforakng)
 
 <br/>
 
@@ -32,7 +32,7 @@ Stacks: Full-Stack, Computer Vision, Model Compression, Edge AI
 Philosophy: Build systems that matter. Research that makes impact. Code that solves real problems.
 
 Currently focused on:
-- 🐾 Designing UI flows for CURAA — cross-platform pet care ecosystem
+- 🐾 Designing flows for CURAA — cross-platform pet care ecosystem
 - 🧠 Researching Knowledge Distillation and Computer Vision
 - ⚡ Building production-grade systems in healthcare, blockchain, and automation
 - ☁️ AI Automation & Enterprise Integrations @ IBM SkillsBuild
@@ -121,10 +121,10 @@ Currently focused on:
 **Comprehensive digital pet ecosystem**
 - Unified mobile interface
 - Orchestrating veterinary services and grooming
-- Cross-platform dynamic UI flows
+- Cross-platform dynamic flows
 - Smooth 60fps native hardware rendering
 
-`Flutter` `Dart` `Mobile` `UI/UX`
+`Flutter` `Dart` `Mobile`
 
 </td>
 <td width="50%" valign="top">

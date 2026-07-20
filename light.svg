@@ -60,7 +60,7 @@
     <tspan x="30" y="295"> </tspan>
     <tspan x="30" y="317">    <tspan fill="#BE185D" font-weight="bold">def</tspan> <tspan fill="#0284C7">current_focus</tspan>(<tspan fill="#BE185D" font-weight="bold">self</tspan>) -&gt; <tspan fill="#6D28D9">list</tspan>[<tspan fill="#6D28D9">str</tspan>]:</tspan>
     <tspan x="30" y="339">        <tspan fill="#BE185D" font-weight="bold">return</tspan> <tspan fill="#D97706">[</tspan></tspan>
-    <tspan x="30" y="361">            <tspan fill="#059669">&quot;🐾 Designing UI flows for CURAA — cross-platform pet care ecosystem&quot;</tspan>,</tspan>
+    <tspan x="30" y="361">            <tspan fill="#059669">&quot;🐾 Designing flows for CURAA — cross-platform pet care ecosystem&quot;</tspan>,</tspan>
     <tspan x="30" y="383">            <tspan fill="#059669">&quot;🧠 Researching Knowledge Distillation and Computer Vision&quot;</tspan>,</tspan>
     <tspan x="30" y="405">            <tspan fill="#059669">&quot;⚡ Building production-grade systems in healthcare, blockchain, and automation&quot;</tspan>,</tspan>
     <tspan x="30" y="427">            <tspan fill="#059669">&quot;☁️ AI Automation &amp; Enterprise Integrations @ IBM SkillsBuild&quot;</tspan>,</tspan>
