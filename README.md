@@ -26,7 +26,7 @@
 ```text
 Name: Akshar Nath Gorain
 Role: Systems Engineer & AI Researcher
-Education: B.Tech CSE, 2nd Year @ Techno India University
+Education: B.Tech CSE, 3rd Year @ Techno India University
 Location: Kolkata, India 🇮🇳
 Stacks: Full-Stack, Computer Vision, Model Compression, Edge AI
 Philosophy: Build systems that matter. Research that makes impact. Code that solves real problems.
