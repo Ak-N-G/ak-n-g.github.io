@@ -32,7 +32,7 @@ Stacks: Full-Stack, Computer Vision, Model Compression, Edge AI
 Philosophy: Build systems that matter. Research that makes impact. Code that solves real problems.
 
 Currently focused on:
-- 🐾 Designing flows for CURAA — cross-platform pet care ecosystem
+- 🐾 Building CURAA — cross-platform mobile architecture & intelligent pet-care ML pipelines
 - 🧠 Researching Knowledge Distillation and Computer Vision
 - ⚡ Building production-grade systems in healthcare, blockchain, and automation
 - ☁️ AI Automation & Enterprise Integrations @ IBM SkillsBuild
@@ -174,11 +174,14 @@ Currently focused on:
 
 ---
 
-## 🏆 Highlights
+## 🏆 Highlights & Publications
 
 - 🥇 **International Champion — COMSYS Hackathon 7** · Team Vic-Trio (Akshar, Sourodyuti & Subhodip)
   - Results announced live at the **7th Intl. Conference on Frontiers in Computing and Systems (COMSYS 2026)**, jointly organised by **Škoda Auto University, Czech Republic** & COMSYS Educational Trust
   - Novel Lazy Learning methodology · Rank #1 · Score 0.755
+- 🛰️ **IEEE SPACE 2026 Presenter & Co-Author** — 3rd Space, Aerospace & Defence Conference (Bangalore) · Progressive Knowledge Distillation for Military Vehicles on Edge Devices
+- 🥉 **HexaFalls 2 (3rd Prize, $200 USD)** — Accio Relevance Hackathon · MLH Official Season · JIS University
+- 🏥 **IndiSetu 2026 AI Healthcare Summit** — Student Poster Presenter · SLIC Superpixel Swin-UNet Liver Tumor Segmentation
 - 🔬 **AI Researcher** — Innovating core pipelines for low-compute deployment (Knowledge Distillation & INT8 Quantization)
 - ☁️ **AWS Academy Graduate** — Data Engineering Certified
 - 💼 **Active Internships** — AI Automation (IBM SkillsBuild) and Cybersecurity (Palo Alto)
