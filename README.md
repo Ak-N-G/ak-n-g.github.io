@@ -35,7 +35,9 @@ Currently focused on:
 - 🐾 Building CURAA — cross-platform mobile architecture & intelligent pet-care ML pipelines
 - 🧠 Researching Knowledge Distillation and Computer Vision
 - ⚡ Building production-grade systems in healthcare, blockchain, and automation
-- ☁️ AI Automation & Enterprise Integrations @ IBM SkillsBuild
+- 🏅 AI-ML Virtual Internship @ AICTE × EduSkills — completed (Grade O, Aug–Oct 2026)
+- 🤖 Enterprise AI Engineering (RAG, Vector Search & MCP) @ AICTE × EduSkills — in progress
+- 🐍 Programming in Python @ Meta (Coursera) — in progress
 ```
 </details>
 
@@ -180,12 +182,14 @@ Currently focused on:
   - Results announced live at the **7th Intl. Conference on Frontiers in Computing and Systems (COMSYS 2026)**, jointly organised by **Škoda Auto University, Czech Republic** & COMSYS Educational Trust
   - Novel Lazy Learning methodology · Rank #1 · Score 0.755
 - 🛰️ **IEEE SPACE 2026 Presenter & Co-Author** — 3rd Space, Aerospace & Defence Conference (Bangalore) · Progressive Knowledge Distillation for Military Vehicles on Edge Devices
-- 🥉 **HexaFalls 2 (3rd Prize, $200 USD)** — Accio Relevance Hackathon · MLH Official Season · JIS University
+- 🥉 **HexaFalls 2 (3rd Prize, $200 USD)** — Accio Relevance Hackathon · MLH Official Season · JIS University · Team Traction
+- 🥉 **Made in JIS, Celeb Edition 2026 (3rd Prize)** — Team CURAA, Kolkata (Aug 2026)
+- 📰 **Tech Darshi Coverage (Sept 2026)** — Featured Edge-AI Research Coverage · Jadavpur University, Kolkata
 - 🏥 **IndiSetu 2026 AI Healthcare Summit** — Student Poster Presenter · SLIC Superpixel Swin-UNet Liver Tumor Segmentation
 - 🔬 **AI Researcher** — Innovating core pipelines for low-compute deployment (Knowledge Distillation & INT8 Quantization)
 - ☁️ **AWS Academy Graduate** — Data Engineering Certified
-- 💼 **Active Internships** — AI Automation (IBM SkillsBuild) and Cybersecurity (Palo Alto)
-
+- 💼 **AI-ML Virtual Internship @ AICTE × EduSkills (Google for Developers)** — completed Aug–Oct 2026, Grade O (Outstanding)
+- 📚 **Currently learning** — Enterprise AI Engineering: RAG, Vector Search & MCP (AICTE × EduSkills, Cohort 19) · Programming in Python (Meta · Coursera)
 ---
 
 <div align="center">
