@@ -55,6 +55,9 @@ Currently focused on:
 **Languages**
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white)
@@ -67,6 +70,7 @@ Currently focused on:
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
+![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=flat-square&logo=android&logoColor=white)
 
 **Backend & Infra**
 
@@ -93,6 +97,32 @@ Currently focused on:
 <tr>
 <td width="50%" valign="top">
 
+### ❤️ HeartSense
+**Contactless rPPG vital-signs biometrics**
+- 100% on-device screening of 5 vital signs
+- CameraX locked capture + 478-landmark MediaPipe
+- POS/CHROM DSP with adaptive Kalman tracking at 60 FPS
+- Zero cloud dependency; native clinical PDF report
+
+`Kotlin` `Jetpack Compose` `MediaPipe` `DSP`
+
+</td>
+<td width="50%" valign="top">
+
+### 🛡️ VaaniKavach
+**On-device AI voice clone scam defense**
+- Distilled AASIST anti-spoofing running on TFLite
+- Multilingual coercion detection (Bengali / Hindi)
+- Tamper-evident SHA-256 evidence chain & family mesh
+- Real-time call audio interception on Android
+
+`PyTorch` `TFLite` `Security` `Android`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
 ### 🍽️ ShareBite Platform
 **Production-grade food rescue engine**
 - Aligned with UN SDG 2 (Zero Hunger)
@@ -101,6 +131,32 @@ Currently focused on:
 - NextAuth.js for cross-role logging
 
 `Next.js 14` `PostgreSQL` `Full-Stack`
+
+</td>
+<td width="50%" valign="top">
+
+### ⚡ Delta Terminal
+**Institutional algo-trading system**
+- Δ-THETA Options Engine (theta-harvesting)
+- Five-Gate regime filter: ADX, IV Rank, Vol Ratio
+- Rust core, ultra-low 90MB RAM footprint, sub-ms execution
+- Headless CLI for autonomous agent integration
+
+`Rust` `Python` `Flask` `AsyncIO`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🐾 CURAA Pet Care App
+**Comprehensive digital pet ecosystem**
+- Unified mobile interface
+- Orchestrating veterinary services and grooming
+- Collar vocalization-to-intent ML classifier
+- Smooth 60fps native hardware rendering
+
+`Flutter` `Dart` `Mobile ML`
 
 </td>
 <td width="50%" valign="top">
@@ -116,32 +172,6 @@ Currently focused on:
 
 </td>
 </tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🐾 CURAA Pet Care App
-**Comprehensive digital pet ecosystem**
-- Unified mobile interface
-- Orchestrating veterinary services and grooming
-- Cross-platform dynamic flows
-- Smooth 60fps native hardware rendering
-
-`Flutter` `Dart` `Mobile`
-
-</td>
-<td width="50%" valign="top">
-
-### ⚡ Delta Terminal
-**Institutional algo-trading system**
-- Δ-THETA Options Engine (theta-harvesting)
-- Five-Gate regime filter: ADX, IV Rank, Vol Ratio
-- Multi-alpha interference engine blended into conviction
-- Runs on Ubuntu servers & Termux/ARM64
-
-`Python` `Flask` `AsyncIO` `Socket.IO`
-
-</td>
-</tr>
 </table>
 
 <details>
@@ -151,6 +181,10 @@ Currently focused on:
 
 | Project | Description | Stack |
 |---|---|---|
+| **EdgeRF — Drone ID** | RF drone-controller identification: 99.89% across 17 RC controllers with 0.59 MB INT8 model (~2ms CPU inference) | PyTorch, Edge AI, INT8 |
+| **Cardiosense — Edge ECG** | Battery-powered 3-lead ECG with dual AD8232, ESP32-S3 Rust firmware, and BLE Compose app | ESP32-S3, Rust, BLE |
+| **Legilimens** | Real-time classroom confusion radar: BM25 + vector search with personalized voice explanations | FastAPI, SQLite, Docker |
+| **Liver Tumor Seg (LiTS)** | SLIC superpixel consensus + Swin-UNet (Top 5 Best Poster @ IndiSetu 2026) | Swin-UNet, MedSAM, PyTorch |
 | **VeriFi - Blockchain Auth** | On-chain verification of certificates using Ethereum dApp and digital signatures | Solidity, Next.js, Web3 |
 | **Water Quality Prediction** | ML models predicting 6 major water pollutants using historical station data | Python, Machine Learning |
 | **Lottery Prediction Backend** | Flask API with worker processes, simulator blueprint, and pattern recognition | Flask, Python, Backend |
