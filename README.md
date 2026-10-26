@@ -185,7 +185,7 @@ Currently focused on:
 - 🥉 **HexaFalls 2 (3rd Prize, $200 USD)** — Accio Relevance Hackathon · MLH Official Season · JIS University · Team Traction
 - 🥉 **Made in JIS, Celeb Edition 2026 (3rd Prize)** — Team CURAA, Kolkata (Aug 2026)
 - 📰 **Tech Darshi Coverage (Sept 2026)** — Featured Edge-AI Research Coverage · Jadavpur University, Kolkata
-- 🏥 **IndiSetu 2026 AI Healthcare Summit** — Student Poster Presenter · SLIC Superpixel Swin-UNet Liver Tumor Segmentation
+- 🏅 **Top 5 Best Poster — IndiSetu 2026** · AI in Healthcare Summit, Kolkata · SLIC Superpixel Swin-UNet Liver Tumor Segmentation
 - 🔬 **AI Researcher** — Innovating core pipelines for low-compute deployment (Knowledge Distillation & INT8 Quantization)
 - ☁️ **AWS Academy Graduate** — Data Engineering Certified
 - 💼 **AI-ML Virtual Internship @ AICTE × EduSkills (Google for Developers)** — completed Aug–Oct 2026, Grade O (Outstanding)
