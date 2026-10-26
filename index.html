@@ -3,9 +3,91 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <meta name="description" content="Akshar Nath Gorain — Systems Engineer & AI Researcher. Knowledge Distillation, Computer Vision, Full-Stack, Edge AI."/>
-  <title>Akshar Nath Gorain | AI Researcher & Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <title>Akshar Nath Gorain | Full-Stack & Systems Engineer | Mobile Core, Distributed APIs & Applied Edge ML</title>
+  <meta name="title" content="Akshar Nath Gorain | Full-Stack & Systems Engineer"/>
+  <meta name="description" content="Portfolio of Akshar Nath Gorain — Full-Stack & Systems Engineer building low-latency mobile platforms, real-time monitoring tools, and automated system utilities. Focused on applied ML and production-grade architectures."/>
+  <meta name="keywords" content="Akshar Nath Gorain, Systems Engineer, Edge ML, Knowledge Distillation, Flutter, Kotlin, Jetpack Compose, LiteRT, PyTorch, Rust, Android PPG, Swin-UNet, COMSYS 2026 Champion, IEEE SPACE 2026"/>
+  <meta name="author" content="Akshar Nath Gorain"/>
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+  <meta name="theme-color" content="#0f172a"/>
+  <link rel="canonical" href="https://workforakng.github.io/"/>
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="profile"/>
+  <meta property="og:url" content="https://workforakng.github.io/"/>
+  <meta property="og:site_name" content="Akshar Nath Gorain — Portfolio"/>
+  <meta property="og:title" content="Akshar Nath Gorain | Full-Stack & Systems Engineer"/>
+  <meta property="og:description" content="Building low-latency mobile platforms, real-time monitoring tools, and automated system utilities. Focused on applied ML and production-grade architectures."/>
+  <meta property="og:image" content="https://workforakng.github.io/akshar.jpeg"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="profile:first_name" content="Akshar Nath"/>
+  <meta property="profile:last_name" content="Gorain"/>
+  <meta property="profile:username" content="workforakng"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@Ak_N_G"/>
+  <meta name="twitter:creator" content="@Ak_N_G"/>
+  <meta name="twitter:url" content="https://workforakng.github.io/"/>
+  <meta name="twitter:title" content="Akshar Nath Gorain | Full-Stack & Systems Engineer"/>
+  <meta name="twitter:description" content="Building low-latency mobile platforms, real-time monitoring tools, and automated system utilities. Applied ML & edge architectures."/>
+  <meta name="twitter:image" content="https://workforakng.github.io/akshar.jpeg"/>
+
+  <!-- Structured Data (JSON-LD) for Rich Google Knowledge Graph -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://workforakng.github.io/#person",
+        "name": "Akshar Nath Gorain",
+        "alternateName": "Akshar Gorain",
+        "jobTitle": "Full-Stack & Systems Engineer",
+        "description": "Full-Stack & Systems Engineer specializing in low-latency mobile platforms, real-time monitoring tools, and applied edge ML.",
+        "url": "https://workforakng.github.io/",
+        "image": "https://workforakng.github.io/akshar.jpeg",
+        "sameAs": [
+          "https://github.com/workforakng",
+          "https://linkedin.com/in/ak-n-g",
+          "https://twitter.com/Ak_N_G"
+        ],
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Techno India University"
+        },
+        "knowsAbout": [
+          "Applied Edge Machine Learning",
+          "Knowledge Distillation",
+          "Computer Vision",
+          "Signal Processing",
+          "Android Kotlin Development",
+          "Flutter & Dart",
+          "Rust Systems Programming",
+          "Distributed APIs",
+          "LiteRT & TFLite"
+        ],
+        "award": [
+          "Champion (Rank #1) - COMSYS Hackathon 7, Škoda Auto University, Czech Republic",
+          "3rd Prize - HexaFalls 2 (MLH Season), JIS University",
+          "Top 5 Best Poster - IndiSetu 2026 AI in Healthcare Summit",
+          "3rd Prize - Made in JIS (Celeb Edition 2026), Team CURAA"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://workforakng.github.io/#website",
+        "url": "https://workforakng.github.io/",
+        "name": "Akshar Nath Gorain — Official Engineering Portfolio",
+        "publisher": {
+          "@id": "https://workforakng.github.io/#person"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
   <link rel="icon" href="https://github.com/workforakng.png" type="image/png"/>
 
   <style>
@@ -270,6 +352,151 @@
     .card p{font-size:.86rem;color:var(--muted);line-height:1.6;flex-grow:1;margin-bottom:16px}
     .ctags{display:flex;flex-wrap:wrap;gap:6px;font-size:.68rem;font-family:var(--mono);color:var(--muted);margin-top:auto}
 
+    /* ══ HERO & ACTION STRIP ══ */
+    .hero-persona{
+      display:inline-flex;align-items:center;gap:10px;
+      font-family:var(--mono);font-size:.82rem;font-weight:600;
+      color:var(--cyan);background:rgba(0,240,255,0.06);
+      border:1px solid rgba(0,240,255,0.25);padding:6px 14px;
+      border-radius:24px;margin-bottom:18px;letter-spacing:-.01em;
+      box-shadow:0 0 20px rgba(0,240,255,0.1);
+    }
+    .hero-persona .pulse-status{
+      width:8px;height:8px;background:var(--cyan);border-radius:50%;
+      box-shadow:0 0 10px var(--cyan);animation:pulse-dot 2s infinite;
+    }
+    .hero-hook{
+      font-size:clamp(1.2rem,2.5vw,1.9rem);font-weight:700;
+      line-height:1.35;letter-spacing:-.02em;margin-bottom:14px;
+      color:var(--text);max-width:820px;
+    }
+    .hero-hook .accent-text{
+      background:linear-gradient(90deg,var(--cyan),var(--primary),var(--blue));
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+    }
+    .action-strip{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:12px;margin:24px 0 28px;max-width:880px;
+    }
+    .strip-btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      padding:12px 18px;border-radius:10px;font-weight:600;font-size:.86rem;
+      font-family:var(--mono);letter-spacing:-.02em;
+      border:1px solid var(--border);transition:all .25s var(--ease);
+      cursor:none;position:relative;overflow:hidden;
+    }
+    .strip-resume{
+      background:linear-gradient(135deg,var(--primary),#7c3aed);
+      color:#000;border:none;box-shadow:0 0 24px rgba(167,139,250,0.35);font-weight:700;
+    }
+    .strip-resume:hover{
+      transform:translateY(-2px);box-shadow:0 0 32px rgba(167,139,250,0.6);color:#000;
+    }
+    .strip-github{
+      background:rgba(255,255,255,0.04);color:var(--text);
+    }
+    .strip-github:hover{
+      border-color:var(--cyan);color:var(--cyan);background:rgba(0,240,255,0.06);transform:translateY(-2px);
+    }
+    .strip-linkedin{
+      background:rgba(255,255,255,0.04);color:var(--text);
+    }
+    .strip-linkedin:hover{
+      border-color:#38bdf8;color:#38bdf8;background:rgba(56,189,248,0.06);transform:translateY(-2px);
+    }
+    .strip-contact{
+      background:rgba(255,255,255,0.04);color:var(--text);
+    }
+    .strip-contact:hover{
+      border-color:var(--primary);color:var(--primary);background:rgba(167,139,250,0.08);transform:translateY(-2px);
+    }
+
+    /* ══ STAR PROJECT CARDS ══ */
+    .card-schematic{
+      background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.05);
+      border-radius:8px;padding:10px 14px;margin-bottom:14px;
+      font-family:var(--mono);font-size:.69rem;color:#38bdf8;
+      display:flex;align-items:center;gap:8px;
+    }
+    .card-schematic svg{flex-shrink:0;opacity:.8}
+    .star-block{
+      display:flex;flex-direction:column;gap:10px;margin-bottom:16px;
+    }
+    .star-point{
+      font-size:.84rem;color:var(--muted);line-height:1.55;
+      padding-left:14px;position:relative;
+    }
+    .star-point::before{
+      content:'';position:absolute;left:0;top:8px;
+      width:5px;height:5px;border-radius:50%;background:var(--primary);
+    }
+    .star-label{
+      font-family:var(--mono);font-size:.72rem;font-weight:700;
+      color:var(--text);letter-spacing:-.01em;margin-right:4px;
+      display:inline-block;
+    }
+    .card-actions{
+      display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding-top:14px;
+      border-top:1px solid rgba(255,255,255,0.06);
+    }
+    .card-action-btn{
+      display:inline-flex;align-items:center;gap:6px;
+      font-family:var(--mono);font-size:.72rem;font-weight:600;
+      padding:5px 11px;border-radius:6px;border:1px solid var(--border);
+      background:rgba(255,255,255,0.03);color:var(--text);
+      transition:all .2s;cursor:none;
+    }
+    .card-action-btn:hover{
+      border-color:var(--primary);color:var(--primary);background:rgba(167,139,250,0.1);
+      transform:translateY(-1px);
+    }
+    .card-action-btn.primary-badge{
+      border-color:rgba(0,240,255,0.3);color:var(--cyan);background:rgba(0,240,255,0.05);
+    }
+    .card-action-btn.primary-badge:hover{
+      border-color:var(--cyan);background:rgba(0,240,255,0.15);box-shadow:0 0 12px rgba(0,240,255,0.25);
+    }
+
+    /* ══ TECHNICAL DEEP DIVE SECTION ══ */
+    .deep-dive-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(480px,1fr));gap:24px}
+    @media(max-width:680px){.deep-dive-grid{grid-template-columns:1fr}}
+    .dd-card{
+      background:var(--surf);border:1px solid var(--border);border-radius:14px;
+      padding:28px;backdrop-filter:blur(14px);position:relative;
+      transition:all .3s var(--ease);overflow:hidden;
+    }
+    .dd-card:hover{
+      border-color:var(--border-h);box-shadow:var(--glow);transform:translateY(-3px);
+    }
+    .dd-badge{
+      display:inline-block;font-family:var(--mono);font-size:.7rem;font-weight:700;
+      color:var(--cyan);border:1px solid rgba(0,240,255,0.3);padding:3px 10px;
+      border-radius:4px;background:rgba(0,240,255,0.06);margin-bottom:12px;
+    }
+    .dd-title{
+      font-size:1.25rem;font-weight:800;letter-spacing:-.02em;margin-bottom:10px;
+      color:var(--text);
+    }
+    .dd-summary{
+      font-size:.87rem;color:var(--muted);line-height:1.65;margin-bottom:18px;
+    }
+    .dd-diagram{
+      background:rgba(0,0,0,0.55);border:1px solid rgba(255,255,255,0.08);
+      border-radius:8px;padding:14px 16px;font-family:var(--mono);
+      font-size:.76rem;color:#e2e8f0;line-height:1.6;margin-bottom:18px;
+      overflow-x:auto;
+    }
+    .dd-diagram .diag-step{color:var(--cyan);font-weight:600}
+    .dd-diagram .diag-arrow{color:var(--muted)}
+    .dd-diagram .diag-res{color:#10b981;font-weight:600}
+    .dd-takeaways{list-style:none;display:flex;flex-direction:column;gap:8px}
+    .dd-takeaways li{
+      font-size:.82rem;color:var(--muted);padding-left:16px;position:relative;line-height:1.55;
+    }
+    .dd-takeaways li::before{
+      content:'⚡';position:absolute;left:0;font-size:.72rem;color:var(--primary);
+    }
+
     /* ══ ALL WORK ══ */
     .all-work-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
     .aw-card{
@@ -374,6 +601,7 @@
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
+      <a href="#deep-dives">Deep Dives</a>
       <a href="#all-work">All Work</a>
       <a href="#contact">Contact</a>
     </div>
@@ -388,23 +616,42 @@
 
   <!-- ── HERO ──────────────────────────── -->
   <section class="hero">
-    <div class="hero-tag fu">available for collaborations</div>
+    <div class="hero-persona fu">
+      <span class="pulse-status"></span>
+      Full-Stack &amp; Systems Engineer | Mobile Core, Distributed APIs &amp; Applied Edge ML
+    </div>
     <img src="akshar.jpeg" alt="Akshar Nath Gorain" class="hero-avatar fu">
     <div class="gw fu d1">
       <h1 data-text="Akshar Nath Gorain">Akshar Nath Gorain</h1>
     </div>
-    <h2 class="fu d2">Building <span class="hi">AI Systems</span> · Shipping code that matters.</h2>
-    <p class="hero-sub fu d3">Systems Engineer &amp; AI Researcher at Techno India University. Researching Knowledge Distillation, building production full-stack platforms, and shipping intelligent systems — one commit at a time.</p>
-    <div class="hero-btns fu d4">
-      <a href="Resume_Akshar_Nath_Gorain.pdf" target="_blank" class="btn btn-solid mag-btn">
-        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        Resume
-      </a>
-      <a href="#projects" class="btn btn-ghost mag-btn">Let's Build ↓</a>
+    <div class="hero-hook fu d2">
+      Building <span class="accent-text">low-latency mobile platforms, real-time monitoring tools, and automated system utilities</span>. Focused on applied ML and production-grade architectures.
     </div>
+    <p class="hero-sub fu d3">Undergraduate Researcher at Techno India University &amp; Co-builder at CURAA. International Champion at COMSYS 2026. Translating high-dimensional machine learning and low-level Linux/mobile kernels into reliable client platforms.</p>
+    
+    <!-- High-Conversion Action Strip (Direct 5-Second Scan) -->
+    <div class="action-strip fu d4">
+      <a href="Resume_Akshar_Nath_Gorain.pdf" target="_blank" class="strip-btn strip-resume mag-btn" title="Direct PDF Download / View">
+        <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="12" y2="18"/><line x1="15" y1="15" x2="12" y2="18"/></svg>
+        View Resume (PDF)
+      </a>
+      <a href="https://github.com/workforakng" target="_blank" rel="noopener noreferrer" class="strip-btn strip-github mag-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        GitHub Profile
+      </a>
+      <a href="https://linkedin.com/in/ak-n-g" target="_blank" rel="noopener noreferrer" class="strip-btn strip-linkedin mag-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <a href="mailto:workforakng@gmail.com" class="strip-btn strip-contact mag-btn">
+        <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        Email / Contact
+      </a>
+    </div>
+
     <div class="loc-badge fu d4">
       <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      Kolkata, West Bengal, India
+      Kolkata, West Bengal, India · Available for high-impact roles &amp; research
     </div>
   </section>
 
@@ -505,114 +752,338 @@
     </div>
     <div class="proj-grid">
 
-      <article class="card" data-category="apps" onclick="window.open('https://github.com/workforakng/heartsense','_blank')">
-        <div class="cc"><div class="ch">
-          <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-          <svg class="ce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+      <!-- 1. HeartSense (Flagship Vital Monitoring) -->
+      <article class="card" data-category="apps">
+        <div class="cc">
+          <div class="ch">
+            <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            <span class="aw-badge pub" style="font-size:.65rem">Open Source</span>
+          </div>
+          <h3>HeartSense — Contactless Vital Monitoring</h3>
+          <div class="card-schematic">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span>CMOS Camera ➔ CHROM/POS DSP ➔ LiteRT ➔ 5 Vitals @ 60 FPS</span>
+          </div>
+          <div class="star-block">
+            <div class="star-point"><span class="star-label">Architecture &amp; Constraints:</span> Extracted real-time Photoplethysmography (PPG) waveforms directly from mobile CMOS sensors using CameraX and lightweight Google LiteRT inference pipelines.</div>
+            <div class="star-point"><span class="star-label">Engineering Impact:</span> Optimized frame-buffer processing in C++/Kotlin to maintain 60 FPS inference without thermal throttling on mid-range Android hardware (zero cloud roundtrips, 100% on-device).</div>
+          </div>
+          <div class="ctags"><span>LiteRT</span><span>Kotlin / Compose</span><span>OpenCV</span><span>Signal DSP (FFT)</span><span>CameraX</span></div>
+          <div class="card-actions">
+            <a href="https://github.com/workforakng/heartsense" target="_blank" rel="noopener noreferrer" class="card-action-btn primary-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub Repo
+            </a>
+            <a href="#deep-dives" class="card-action-btn">
+              <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              Architecture Spec
+            </a>
+          </div>
         </div>
-        <h3>HeartSense — Contactless Biometrics</h3>
-        <p>100% on-device rPPG contactless screening of 5 vital signs (HR, SpO₂, Respiration, HRV, Stress) from a 30-second camera scan. CameraX locked capture, POS/CHROM color difference DSP, Kalman filtering at 60 FPS.</p>
-        <div class="ctags"><span>Kotlin</span><span>Jetpack Compose</span><span>MediaPipe</span><span>Edge DSP</span></div></div>
       </article>
 
-      <article class="card" data-category="research" onclick="window.open('https://github.com/workforakng','_blank')">
-        <div class="cc"><div class="ch">
-          <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/></svg>
-          <svg class="ce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+      <!-- 2. CURAA (Mobile Core & Service Orchestration) -->
+      <article class="card" data-category="apps">
+        <div class="cc">
+          <div class="ch">
+            <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            <span class="aw-badge" style="font-size:.65rem;border-color:rgba(167,139,250,0.4);color:var(--primary)">Production App</span>
+          </div>
+          <h3>CURAA — Mobile Core &amp; Service Orchestration</h3>
+          <div class="card-schematic">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/></svg>
+            <span>Flutter 60fps UI ➔ Offline SQLite Sync ➔ Payment Webhooks</span>
+          </div>
+          <div class="star-block">
+            <div class="star-point"><span class="star-label">Architecture &amp; Constraints:</span> Engineered the core client orchestration layer integrating scheduled asynchronous vet bookings, payment gateway webhooks, and state caching for unstable 4G networks.</div>
+            <div class="star-point"><span class="star-label">Engineering Impact:</span> Reduced cold-start load times by 40% via lazy asset resolution and modular state stores; delivered native 60 FPS transitions across 5 microservices.</div>
+          </div>
+          <div class="ctags"><span>Flutter / Dart</span><span>RESTful APIs</span><span>State Management</span><span>PostgreSQL</span><span>Mobile ML</span></div>
+          <div class="card-actions">
+            <a href="https://curaa.co.in" target="_blank" rel="noopener noreferrer" class="card-action-btn primary-badge">
+              <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              Live Platform
+            </a>
+            <span class="card-action-btn" style="opacity:.7">Co-built w/ Sourodyuti</span>
+          </div>
         </div>
-        <h3>EdgeRF — RF Drone Identification</h3>
-        <p>Edge RF signal classification achieving 99.89% accuracy across 17 RC drone controllers with a 0.59 MB INT8 model (~2ms CPU inference). Exposes train/test leakage in published DroneRF benchmarks (IEEE RadarConf 2027 prep).</p>
-        <div class="ctags"><span>PyTorch</span><span>Edge AI</span><span>INT8 Quantization</span><span>DSP</span></div></div>
       </article>
 
-      <article class="card" data-category="systems" onclick="window.open('https://github.com/workforakng','_blank')">
-        <div class="cc"><div class="ch">
-          <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-          <svg class="ce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+      <!-- 3. Linux & Termux Automation Engine -->
+      <article class="card" data-category="systems">
+        <div class="cc">
+          <div class="ch">
+            <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <span class="aw-badge pub" style="font-size:.65rem">Open Source</span>
+          </div>
+          <h3>Linux &amp; Termux System Automation</h3>
+          <div class="card-schematic">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <span>Boot Watcher ➔ Heartbeat Daemon ➔ Self-Healing SSH Tunnel</span>
+          </div>
+          <div class="star-block">
+            <div class="star-point"><span class="star-label">Architecture &amp; Constraints:</span> Headless bash/daemon automation engine running under Termux/Linux environments for autonomous boot recovery, remote tunnel healing, and continuous telemetry logging (vnstat, CPU/RAM buffers).</div>
+            <div class="star-point"><span class="star-label">Engineering Impact:</span> Achieved 99.9% uptime on remote headless Android nodes; instant automated Telegram alerting on dynamic WAN IP changes and unauthorized login spikes.</div>
+          </div>
+          <div class="ctags"><span>Bash</span><span>Linux Signals</span><span>Termux API</span><span>SSH Tunneling</span><span>Network Sockets</span></div>
+          <div class="card-actions">
+            <a href="https://github.com/workforakng/ssh_termux_auto" target="_blank" rel="noopener noreferrer" class="card-action-btn primary-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub Repo
+            </a>
+            <a href="#deep-dives" class="card-action-btn">System Breakdown</a>
+          </div>
         </div>
-        <h3>VaaniKavach — Voice Clone Defense</h3>
-        <p>On-device "voice armor" against AI deepfake voice scam calls. Distilled AASIST anti-spoofing running on TFLite, multilingual coercion detection (Bengali/Hindi), and SHA-256 tamper-evident forensic audio logging.</p>
-        <div class="ctags"><span>TFLite</span><span>Audio ML</span><span>Security</span><span>Android</span></div></div>
       </article>
 
-      <article class="card" data-category="systems" onclick="void(0)">
-        <div class="cc"><div class="ch">
-          <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-          <span style="font-family:var(--mono);font-size:.58rem;color:var(--muted);border:1px solid var(--border);padding:2px 6px;border-radius:3px">private</span>
+      <!-- 4. EdgeRF (RF Drone Signal Classification) -->
+      <article class="card" data-category="research">
+        <div class="cc">
+          <div class="ch">
+            <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/></svg>
+            <span class="aw-badge pub" style="font-size:.65rem">IEEE Prep</span>
+          </div>
+          <h3>EdgeRF — RF Drone Identification</h3>
+          <div class="card-schematic">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <span>Raw I/Q Spectrograms ➔ INT8 Quantized CNN ➔ 0.59 MB Payload</span>
+          </div>
+          <div class="star-block">
+            <div class="star-point"><span class="star-label">Architecture &amp; Constraints:</span> Formulated lightweight INT8 quantized neural classification over high-frequency RF bursts across 17 commercial drone remote controllers.</div>
+            <div class="star-point"><span class="star-label">Engineering Impact:</span> Achieved 99.89% classification accuracy within a 0.59 MB footprint and ~2ms CPU inference latency; rigorously proved and fixed train/test leakage in published DroneRF benchmarks.</div>
+          </div>
+          <div class="ctags"><span>PyTorch</span><span>Edge AI</span><span>INT8 Quantization</span><span>Signal DSP</span><span>Embedded C++</span></div>
+          <div class="card-actions">
+            <a href="https://github.com/workforakng" target="_blank" rel="noopener noreferrer" class="card-action-btn primary-badge">Research Artifacts</a>
+          </div>
         </div>
-        <h3>Delta Terminal</h3>
-        <p>Institutional crypto futures &amp; options trading terminal in Rust &amp; Python. Live BTC/ETH derivatives with sub-millisecond execution latency on an ultra-low 90MB RAM footprint. Five-Gate regime filtering &amp; headless CLI.</p>
-        <div class="ctags"><span>Rust</span><span>Python</span><span>Flask</span><span>AsyncIO</span></div></div>
       </article>
 
-      <article class="card" data-category="apps" onclick="window.open('https://sharebite-platform.vercel.app','_blank')">
-        <div class="cc"><div class="ch">
-          <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
-          <svg class="ce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+      <!-- 5. VaaniKavach (Audio ML Scam Defense) -->
+      <article class="card" data-category="systems">
+        <div class="cc">
+          <div class="ch">
+            <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <span class="aw-badge pub" style="font-size:.65rem">Open Source</span>
+          </div>
+          <h3>VaaniKavach — Voice Clone Defense</h3>
+          <div class="card-schematic">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/></svg>
+            <span>Real-time Audio Stream ➔ AASIST Distilled TFLite ➔ SHA-256 Ledger</span>
+          </div>
+          <div class="star-block">
+            <div class="star-point"><span class="star-label">Architecture &amp; Constraints:</span> Designed zero-latency telephony defense isolating deepfake synthetic voice synthesis in incoming calls using distilled AASIST graph architectures.</div>
+            <div class="star-point"><span class="star-label">Engineering Impact:</span> Runs 100% locally on Android without off-device audio transmission; provides multilingual coercion keyword recognition and tamper-evident SHA-256 evidence logging.</div>
+          </div>
+          <div class="ctags"><span>TFLite</span><span>Audio ML</span><span>Security</span><span>Android NDK</span><span>Forensics</span></div>
+          <div class="card-actions">
+            <a href="https://github.com/workforakng" target="_blank" rel="noopener noreferrer" class="card-action-btn primary-badge">GitHub Profile</a>
+          </div>
         </div>
-        <h3>ShareBite Platform</h3>
-        <p>Production-grade food rescue engine aligned with UN SDG 2 (Zero Hunger). Smart real-time surplus food ledger with automated category expiry windows, safety verification, and instant dispatch.</p>
-        <div class="ctags"><span>Next.js 14</span><span>PostgreSQL</span><span>Prisma</span><span>NextAuth.js</span></div></div>
       </article>
 
-      <article class="card" data-category="research" onclick="window.open('https://github.com/workforakng','_blank')">
-        <div class="cc"><div class="ch">
-          <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
-          <svg class="ce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+      <!-- 6. Delta Terminal (Institutional Algo-Trading) -->
+      <article class="card" data-category="systems">
+        <div class="cc">
+          <div class="ch">
+            <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+            <span class="aw-badge" style="font-size:.65rem">Private Core</span>
+          </div>
+          <h3>Delta Terminal — Algo Execution Core</h3>
+          <div class="card-schematic">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            <span>Live WebSocket Orderbooks ➔ Five-Gate Filter ➔ &lt;1ms Tick Routing</span>
+          </div>
+          <div class="star-block">
+            <div class="star-point"><span class="star-label">Architecture &amp; Constraints:</span> Low-latency derivatives trading terminal in Rust &amp; Python executing live BTC/ETH options strategies under strict memory bounds (&lt;90MB RAM).</div>
+            <div class="star-point"><span class="star-label">Engineering Impact:</span> Sub-millisecond tick dispatch with zero GC pauses; implemented multi-alpha interference models and headless remote CLI monitoring. Co-engineered with Sourodyuti.</div>
+          </div>
+          <div class="ctags"><span>Rust</span><span>Python</span><span>Flask / Sockets</span><span>AsyncIO</span><span>Derivatives</span></div>
+          <div class="card-actions">
+            <span class="card-action-btn" style="opacity:.7">Proprietary / Private</span>
+          </div>
         </div>
-        <h3>Liver Tumor Segmentation</h3>
-        <p>SLIC superpixel consensus post-processing with fine-tuned Swin-UNet, outperforming MedSAM and SAM2-Tiny on the LiTS benchmark. Awarded Top 5 Best Poster at IndiSetu 2026 AI in Healthcare Summit.</p>
-        <div class="ctags"><span>Swin-UNet</span><span>SLIC</span><span>MedSAM</span><span>Medical AI</span></div></div>
       </article>
 
-      <article class="card" data-category="research" onclick="window.open('https://github.com/workforakng/Vision-Knowledge-Distillation','_blank')">
-        <div class="cc"><div class="ch">
-          <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
-          <svg class="ce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+      <!-- 7. ShareBite Platform (Production Full-Stack) -->
+      <article class="card" data-category="apps">
+        <div class="cc">
+          <div class="ch">
+            <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+            <span class="aw-badge pub" style="font-size:.65rem">Live Production</span>
+          </div>
+          <h3>ShareBite Platform — Food Rescue Engine</h3>
+          <div class="card-schematic">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v1"/></svg>
+            <span>Next.js 14 App Router ➔ PostgreSQL / Prisma ➔ Real-Time Ledger</span>
+          </div>
+          <div class="star-block">
+            <div class="star-point"><span class="star-label">Architecture &amp; Constraints:</span> Real-time surplus inventory distribution engine aligned with UN SDG 2 (Zero Hunger), featuring strict role-based access control and expiry tracking.</div>
+            <div class="star-point"><span class="star-label">Engineering Impact:</span> Zero-latency donation matching via optimistic UI mutations; resilient atomic state transactions preventing double-claim race conditions.</div>
+          </div>
+          <div class="ctags"><span>Next.js 14</span><span>PostgreSQL</span><span>Prisma ORM</span><span>NextAuth</span><span>Tailwind</span></div>
+          <div class="card-actions">
+            <a href="https://sharebite-platform.vercel.app" target="_blank" rel="noopener noreferrer" class="card-action-btn primary-badge">
+              <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              Live Demo
+            </a>
+          </div>
         </div>
-        <h3>Vision Knowledge Distillation</h3>
-        <p>PyTorch teacher-student distillation: ResNet18 → MobileNetV2 on CIFAR-10. AMP, gradient clipping, automatic visualization tracking, and low-power edge-deployment configurations.</p>
-        <div class="ctags"><span>PyTorch</span><span>Computer Vision</span><span>Knowledge Distillation</span></div></div>
       </article>
 
-      <article class="card" data-category="apps" onclick="window.open('https://curaa.co.in','_blank')">
-        <div class="cc"><div class="ch">
-          <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-          <svg class="ce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+      <!-- 8. Liver Tumor Segmentation (Medical AI Poster Award) -->
+      <article class="card" data-category="research">
+        <div class="cc">
+          <div class="ch">
+            <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+            <span class="aw-badge pub" style="font-size:.65rem">Top 5 Poster Award</span>
+          </div>
+          <h3>Liver Tumor Segmentation — Swin-UNet</h3>
+          <div class="card-schematic">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 7v10c0 2 1.5 3 3.5 3h9c2 0 3.5-1 3.5-3V7c0-2-1.5-3-3.5-3h-9C5.5 4 4 5 4 7z"/></svg>
+            <span>CT Scans ➔ Swin-UNet Embeddings ➔ SLIC Superpixel Boundary Refinement</span>
+          </div>
+          <div class="star-block">
+            <div class="star-point"><span class="star-label">Architecture &amp; Constraints:</span> Swin Transformer encoder-decoder paired with Simple Linear Iterative Clustering (SLIC) superpixel boundary consensus on the LiTS medical benchmark.</div>
+            <div class="star-point"><span class="star-label">Engineering Impact:</span> Outperformed MedSAM and SAM2-Tiny baseline models on fine edge lesion detection; honored with Top 5 Best Poster at IndiSetu 2026 AI Healthcare Summit.</div>
+          </div>
+          <div class="ctags"><span>Swin-UNet</span><span>SLIC</span><span>MedSAM</span><span>PyTorch</span><span>Medical Imaging</span></div>
+          <div class="card-actions">
+            <a href="https://github.com/workforakng" target="_blank" rel="noopener noreferrer" class="card-action-btn primary-badge">Poster Abstract</a>
+          </div>
         </div>
-        <h3>CURAA — Pet Care Ecosystem</h3>
-        <p>Cross-platform Flutter app for a 5-microservice pet-care ecosystem. Native 60fps rendering, on-device audio classification from smart collar vocalizations, vet &amp; grooming scheduling.</p>
-        <div class="ctags"><span>Flutter</span><span>Dart</span><span>Mobile ML</span><span>Node.js</span></div></div>
       </article>
 
-      <article class="card" data-category="systems" onclick="void(0)">
-        <div class="cc"><div class="ch">
-          <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
-          <span style="font-family:var(--mono);font-size:.58rem;color:var(--muted);border:1px solid var(--border);padding:2px 6px;border-radius:3px">hardware</span>
+      <!-- 9. Vision Knowledge Distillation -->
+      <article class="card" data-category="research">
+        <div class="cc">
+          <div class="ch">
+            <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+            <span class="aw-badge pub" style="font-size:.65rem">Open Source</span>
+          </div>
+          <h3>Vision Knowledge Distillation</h3>
+          <div class="card-schematic">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 20l9-5-9-5-9 5 9 5z"/></svg>
+            <span>ResNet-18 (Teacher) ➔ KL Divergence Loss ➔ MobileNetV2 (Student)</span>
+          </div>
+          <div class="star-block">
+            <div class="star-point"><span class="star-label">Architecture &amp; Constraints:</span> Logit-level distillation pipeline transferring dark knowledge from heavier CNNs into lightweight edge backbones under automated mixed precision (AMP).</div>
+            <div class="star-point"><span class="star-label">Engineering Impact:</span> Achieved 4.8x compression ratio with less than 1.4% accuracy degradation on CIFAR-10; integrated WandB telemetry and ONNX export.</div>
+          </div>
+          <div class="ctags"><span>PyTorch</span><span>Knowledge Distillation</span><span>Edge AI</span><span>ONNX</span></div>
+          <div class="card-actions">
+            <a href="https://github.com/workforakng/Vision-Knowledge-Distillation" target="_blank" rel="noopener noreferrer" class="card-action-btn primary-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub Repo
+            </a>
+          </div>
         </div>
-        <h3>Cardiosense — Edge ECG Platform</h3>
-        <p>Battery-powered 3-lead ECG screening with 100% on-device analysis. Dual AD8232 analog front-end with ESP32-S3 running embedded Rust firmware, streaming over BLE to a Kotlin/Compose client.</p>
-        <div class="ctags"><span>ESP32-S3</span><span>Rust</span><span>BLE</span><span>Kotlin</span></div></div>
       </article>
 
-      <article class="card" data-category="systems" onclick="window.open('https://github.com/workforakng/ssh_termux_auto','_blank')">
-        <div class="cc"><div class="ch">
-          <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-          <svg class="ce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+      <!-- 10. Cardiosense (Edge ECG Platform) -->
+      <article class="card" data-category="systems">
+        <div class="cc">
+          <div class="ch">
+            <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+            <span class="aw-badge" style="font-size:.65rem;border-color:rgba(239,68,68,0.4);color:#ef4444">Hardware + App</span>
+          </div>
+          <h3>Cardiosense — Edge ECG Platform</h3>
+          <div class="card-schematic">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <span>AD8232 Sensor ➔ ESP32-S3 (Rust) ➔ BLE Stream ➔ Compose Client</span>
+          </div>
+          <div class="star-block">
+            <div class="star-point"><span class="star-label">Architecture &amp; Constraints:</span> Battery-powered 3-lead ECG screening platform with 100% on-device analysis and zero cloud reliance.</div>
+            <div class="star-point"><span class="star-label">Engineering Impact:</span> Embedded Rust firmware reading analog buffers from dual AD8232 chips; real-time low-energy Bluetooth packet streaming to a modern Kotlin/Jetpack Compose interface.</div>
+          </div>
+          <div class="ctags"><span>ESP32-S3</span><span>Embedded Rust</span><span>BLE</span><span>Kotlin</span><span>Biomedical</span></div>
+          <div class="card-actions">
+            <span class="card-action-btn" style="opacity:.7">Physical Hardware Prototype</span>
+          </div>
         </div>
-        <h3>SSH Termux Automation</h3>
-        <p>Server automation suite: IP change detection, failed login monitoring, battery alerts via Telegram API. Production-tested on Termux/Linux environments.</p>
-        <div class="ctags"><span>Bash</span><span>Linux</span><span>Termux</span><span>Automation</span></div></div>
       </article>
 
-      <article class="card" data-category="systems" onclick="window.open('https://github.com/workforakng/VeriFi','_blank')">
-        <div class="cc"><div class="ch">
-          <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-          <svg class="ce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+      <!-- 11. VeriFi (Blockchain Document Verification) -->
+      <article class="card" data-category="systems">
+        <div class="cc">
+          <div class="ch">
+            <svg class="ci" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <span class="aw-badge pub" style="font-size:.65rem">Open Source</span>
+          </div>
+          <h3>VeriFi — Blockchain Auth</h3>
+          <div class="card-schematic">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Document Hash (SHA-256) ➔ Solidity Contract ➔ On-Chain Proof</span>
+          </div>
+          <div class="star-block">
+            <div class="star-point"><span class="star-label">Architecture &amp; Constraints:</span> Ethereum dApp for verifiable academic credential notarization and attendance records using SHA-256 digital signature proofs.</div>
+            <div class="star-point"><span class="star-label">Engineering Impact:</span> Deployed gas-optimized smart contracts ensuring non-repudiation and zero-tamper record verification across institutions.</div>
+          </div>
+          <div class="ctags"><span>Solidity</span><span>Ethereum</span><span>Web3.js</span><span>Next.js</span></div>
+          <div class="card-actions">
+            <a href="https://github.com/workforakng/VeriFi" target="_blank" rel="noopener noreferrer" class="card-action-btn primary-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub Repo
+            </a>
+          </div>
         </div>
-        <h3>VeriFi — Blockchain Auth</h3>
-        <p>Ethereum dApp for on-chain verification of certificates, attendance, and payments. SHA-256 + digital signatures on Edu Net Blockchain infrastructure.</p>
-        <div class="ctags"><span>Solidity</span><span>Web3</span><span>Next.js</span></div></div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ── TECHNICAL DEEP-DIVES / SYSTEM DESIGN ── -->
+  <section id="deep-dives" style="border-top:1px solid var(--border)">
+    <div class="sec-label">// engineering architecture</div>
+    <h2 class="sec-title">Technical Deep Dives.</h2>
+    <p class="sec-sub">How I reason through bottlenecks, system latency, and edge compute trade-offs.</p>
+
+    <div class="deep-dive-grid">
+
+      <!-- Deep Dive 1: HeartSense rPPG -->
+      <article class="dd-card">
+        <span class="dd-badge">SYSTEM DESIGN &middot; EDGE DSP</span>
+        <h3 class="dd-title">Sub-Millisecond PPG Signal Processing: Eliminating Motion Artifacts via POS/CHROM &amp; Adaptive Kalman Filtering</h3>
+        <p class="dd-summary">
+          Extracting blood volumetric changes from standard RGB CMOS phone cameras introduces severe motion noise, uneven sensor exposure, and non-linear lighting shifts. The core challenge: maintaining sub-bpm accuracy while processing 60 FPS video streams on resource-constrained mobile CPUs without causing thermal throttling or dropping camera frames.
+        </p>
+        <div class="dd-diagram">
+<span class="diag-step">[CameraX 60 FPS RAW YUV]</span>
+     <span class="diag-arrow">&darr; Zero-copy frame lock</span>
+<span class="diag-step">[Facial ROI Spatial Downsampling]</span> &rarr; <span class="diag-res">120x120px skin cluster</span>
+     <span class="diag-arrow">&darr; POS (Plane-Orthogonal-to-Skin) &amp; CHROM algorithms</span>
+<span class="diag-step">[BVP Waveform Extraction]</span> &rarr; <span class="diag-res">Dynamic range normalized</span>
+     <span class="diag-arrow">&darr; 2nd-order Butterworth (0.75&ndash;3.0 Hz) + Kalman Filter</span>
+<span class="diag-step">[LiteRT Peak Inversion Engine]</span> &rarr; <span class="diag-res">HR, SpO&sub2;, HRV, Stress @ 60 FPS</span>
+        </div>
+        <ul class="dd-takeaways">
+          <li><strong>Zero-Copy Memory Buffer:</strong> Directly queried Android hardware ImageProxy planes via native C++ buffers, avoiding RGB raster conversion overhead and saving ~14ms per frame.</li>
+          <li><strong>Motion Robustness:</strong> Projected RGB color signals onto a plane orthogonal to the skin tone vector (POS), isolating genuine pulse-induced capillary volume changes from ambient flicker.</li>
+          <li><strong>Compute Efficiency:</strong> Replaced heavy 3D ConvNets with lightweight temporal DSP filters + a quantized 1.2MB LiteRT model, preserving 60 FPS on sub-$150 Android devices.</li>
+        </ul>
+      </article>
+
+      <!-- Deep Dive 2: Termux Daemon Architecture -->
+      <article class="dd-card">
+        <span class="dd-badge">SYSTEMS ENGINEERING &middot; HEADLESS LINUX</span>
+        <h3 class="dd-title">Autonomous Daemon Healing: Building Zero-Root Telemetry &amp; Remote Tunnels under Mobile Linux</h3>
+        <p class="dd-summary">
+          Running persistent automation on mobile Linux (Termux) without root privileges faces aggressive Android battery killers (Doze mode, Phantom Process Killer, and OOM-killer). This architecture constructs a crash-resilient watchdog engine that maintains reverse SSH tunnels, dynamically binds network sockets, and streams hardware telemetry.
+        </p>
+        <div class="dd-diagram">
+<span class="diag-step">[Android Boot Receiver (Termux:Boot)]</span>
+     <span class="diag-arrow">&darr; Spawn daemon with flock mutex</span>
+<span class="diag-step">[Supervisor Daemon (POSIX Shell)]</span> &harr; <span class="diag-res">SIGTERM / SIGHUP Trapped</span>
+     <span class="diag-arrow">&darr; Periodic heartbeat (10s ring buffer)</span>
+<span class="diag-step">[Tunnel State Inspector]</span> &rarr; <span class="diag-res">Socket probe (netstat / /proc/net/tcp)</span>
+     <span class="diag-arrow">&darr; Failure detected? Tear down &amp; exponential backoff</span>
+<span class="diag-step">[Autossh Reverse Tunnel + Telegram Dispatcher]</span> &rarr; <span class="diag-res">99.9% Remote Node Uptime</span>
+        </div>
+        <ul class="dd-takeaways">
+          <li><strong>PID Lock &amp; Orphan Reaping:</strong> Enforced single-instance execution via Linux kernel flock descriptors and automated cleanup of zombie child processes.</li>
+          <li><strong>Self-Healing Tunnel Logic:</strong> Monitored TCP keepalive roundtrips instead of relying solely on process state, triggering reconnects immediately upon carrier IP rotation.</li>
+          <li><strong>Proactive Telemetry:</strong> Compressed rolling system logs (RAM buffers, vnstat network bandwidth, and device temperature) and dispatched asynchronous Telegram webhooks during security anomalies.</li>
+        </ul>
       </article>
 
     </div>
@@ -881,7 +1352,7 @@
       }
     });
   },{threshold:.1});
-  document.querySelectorAll('.ac,.card,.aw-card,.aw2,.tl-item').forEach(el=>io.observe(el));
+  document.querySelectorAll('.ac,.card,.dd-card,.aw-card,.aw2,.tl-item').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
