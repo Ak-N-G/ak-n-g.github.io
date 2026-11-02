@@ -37,7 +37,8 @@ Currently focused on:
 - ⚡ Building production-grade systems in healthcare, blockchain, and automation
 - 🏅 AI-ML Virtual Internship @ AICTE × EduSkills — completed (Grade O, Aug–Oct 2026)
 - 🤖 Enterprise AI Engineering (RAG, Vector Search & MCP) @ AICTE × EduSkills — in progress
-- 🐍 Programming in Python @ Meta (Coursera) — in progress
+- 🎓 Coursera (Oct 2026): Deep Learning Essentials (UPenn) + Ethical Hacking with Kali Linux (EDUCBA) — completed
+- 🐍 Programming in Python @ Meta (Coursera) — completed (Oct 2026)
 ```
 </details>
 
@@ -182,7 +183,7 @@ Currently focused on:
 | Project | Description | Stack |
 |---|---|---|
 | **EdgeRF — Drone ID** | RF drone-controller identification: 99.89% across 17 RC controllers with 0.59 MB INT8 model (~2ms CPU inference) | PyTorch, Edge AI, INT8 |
-| **Cardiosense — Edge ECG** | Battery-powered 3-lead ECG with dual AD8232, ESP32-S3 Rust firmware, and BLE Compose app | ESP32-S3, Rust, BLE |
+| **EdgeECG — Edge ECG** | Battery-powered 3-lead ECG with dual AD8232, ESP32-S3 Rust firmware, and BLE Compose app | ESP32-S3, Rust, BLE |
 | **Legilimens** | Real-time classroom confusion radar: BM25 + vector search with personalized voice explanations | FastAPI, SQLite, Docker |
 | **Liver Tumor Seg (LiTS)** | SLIC superpixel consensus + Swin-UNet (Top 5 Best Poster @ IndiSetu 2026) | Swin-UNet, MedSAM, PyTorch |
 | **VeriFi - Blockchain Auth** | On-chain verification of certificates using Ethereum dApp and digital signatures | Solidity, Next.js, Web3 |
@@ -216,14 +217,14 @@ Currently focused on:
   - Results announced live at the **7th Intl. Conference on Frontiers in Computing and Systems (COMSYS 2026)**, jointly organised by **Škoda Auto University, Czech Republic** & COMSYS Educational Trust
   - Novel Lazy Learning methodology · Rank #1 · Score 0.755
 - 🛰️ **IEEE SPACE 2026 Presenter & Co-Author** — 3rd Space, Aerospace & Defence Conference (Bangalore) · Progressive Knowledge Distillation for Military Vehicles on Edge Devices
-- 🥉 **HexaFalls 2 (3rd Prize, $200 USD)** — Accio Relevance Hackathon · MLH Official Season · JIS University · Team Traction
+- 🥉 **HexaFalls 2 (3rd Prize, $200 USD)** — Accio Relevance Hackathon · JIS University · Team Traction
 - 🥉 **Made in JIS, Celeb Edition 2026 (3rd Prize)** — Team CURAA, Kolkata (Aug 2026)
-- 📰 **Tech Darshi Coverage (Sept 2026)** — Featured Edge-AI Research Coverage · Jadavpur University, Kolkata
+- 📰 **Techdarshi Magazine Article (Sept 2026)** — Co-authored ``Edge-AI Chip: AI Without the Cloud'' · techdarshi.in/magazines/7
 - 🏅 **Top 5 Best Poster — IndiSetu 2026** · AI in Healthcare Summit, Kolkata · SLIC Superpixel Swin-UNet Liver Tumor Segmentation
 - 🔬 **AI Researcher** — Innovating core pipelines for low-compute deployment (Knowledge Distillation & INT8 Quantization)
 - ☁️ **AWS Academy Graduate** — Data Engineering Certified
 - 💼 **AI-ML Virtual Internship @ AICTE × EduSkills (Google for Developers)** — completed Aug–Oct 2026, Grade O (Outstanding)
-- 📚 **Currently learning** — Enterprise AI Engineering: RAG, Vector Search & MCP (AICTE × EduSkills, Cohort 19) · Programming in Python (Meta · Coursera)
+- 📚 **Currently learning** — Enterprise AI Engineering: RAG, Vector Search & MCP (AICTE × EduSkills, Cohort 19)
 ---
 
 <div align="center">
