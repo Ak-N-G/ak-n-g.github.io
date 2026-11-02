@@ -114,6 +114,18 @@
       --border:rgba(0,0,0,.08);--border-h:rgba(124,58,237,.45);
       --glow:0 0 20px rgba(124,58,237,.12);
     }
+    /* Light-mode readability overrides for hardcoded dark-theme surfaces */
+    [data-theme="light"] .card-schematic{background:rgba(0,0,0,.04);border-color:var(--border);color:var(--cyan);}
+    [data-theme="light"] .dd-diagram{background:rgba(0,0,0,.04);border-color:var(--border);color:var(--text);}
+    [data-theme="light"] .dd-diagram .diag-res{color:#059669;}
+    [data-theme="light"] .strip-linkedin:hover{border-color:var(--cyan);color:var(--cyan);background:rgba(2,132,199,.08);}
+    [data-theme="light"] .strip-contact:hover{border-color:var(--primary);color:var(--primary);background:rgba(124,58,237,.08);}
+    [data-theme="light"] .btn-solid{color:#fff;}
+    [data-theme="light"] .aw-badge.pub{border-color:rgba(5,150,105,.3);color:#059669;}
+    [data-theme="light"] .tl-tags .tl-tag{background:var(--surf);border-color:var(--border);color:var(--muted);}
+    [data-theme="light"] .nav{background:rgba(248,250,252,.85);}
+    [data-theme="light"] .strip-linkedin,[data-theme="light"] .strip-contact{background:var(--surf);}
+    [data-theme="light"] .card-schematic svg{opacity:.9;}
 
     /* ══ RESET ══ */
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
