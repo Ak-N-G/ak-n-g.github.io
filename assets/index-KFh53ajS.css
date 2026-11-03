@@ -292,3 +292,18 @@ main, .sec, .hero, footer {
   z-index: 0 !important;
   pointer-events: none !important;
 }
+
+/* Mobile responsiveness adjustments */
+@media (max-width: 767px) {
+  .departures td:last-child {
+    grid-column: 2;
+    text-align: left !important;
+    padding-top: 4px;
+  }
+  .dep-title {
+    padding-right: 0 !important;
+  }
+  .timetable details.tt-row summary {
+    padding: 12px 14px;
+  }
+}
